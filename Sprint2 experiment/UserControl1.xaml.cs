@@ -34,7 +34,7 @@ namespace Sprint2_experiment
 
 
 
-            
+
 
             if (m != 0 && z != 0)
             {
@@ -47,6 +47,13 @@ namespace Sprint2_experiment
                 double hf = m + c;
                 double ha = m;
 
+                tb_teilung.Text = Convert.ToString(p);
+                tb_kopfspiel.Text = Convert.ToString(c);
+                tb_fußkreisdurchmesser.Text = Convert.ToString(df);
+                tb_kopfkreisdurchmesser.Text = Convert.ToString(da);
+                tb_zahnhöhe.Text = Convert.ToString(h);
+                tb_zahnfußhöhe.Text = Convert.ToString(hf);
+                tb_zahnkopfhöhe.Text = Convert.ToString(ha);
             }
 
 
@@ -62,6 +69,13 @@ namespace Sprint2_experiment
                 double ha = m;
 
                 tb_teilung.Text = Convert.ToString(p);
+                tb_zähnezahl.Text = Convert.ToString(z);
+                tb_kopfspiel.Text = Convert.ToString(c);
+                tb_fußkreisdurchmesser.Text = Convert.ToString(df);
+                tb_kopfkreisdurchmesser.Text = Convert.ToString(da);
+                tb_zahnhöhe.Text = Convert.ToString(h);
+                tb_zahnfußhöhe.Text = Convert.ToString(hf);
+                tb_zahnkopfhöhe.Text = Convert.ToString(ha);
             }
 
             else if (z != 0 && d != 0)
@@ -74,7 +88,14 @@ namespace Sprint2_experiment
                 double h = 2 * m + c;
                 double hf = m + c;
                 double ha = m;
-                
+
+                tb_teilung.Text = Convert.ToString(p);
+                tb_kopfspiel.Text = Convert.ToString(c);
+                tb_fußkreisdurchmesser.Text = Convert.ToString(df);
+                tb_kopfkreisdurchmesser.Text = Convert.ToString(da);
+                tb_zahnhöhe.Text = Convert.ToString(h);
+                tb_zahnfußhöhe.Text = Convert.ToString(hf);
+                tb_zahnkopfhöhe.Text = Convert.ToString(ha);
             }
 
         }
