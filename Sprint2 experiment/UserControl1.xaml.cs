@@ -26,6 +26,16 @@ namespace Sprint2_experiment
         }
   
 
+
+        //private void
+        //{
+            //Wennn das Programm aufgerufen wird, sind zunächst alle Textboxen und Labels unsichtbar geschaltet. Die benötigten werden jeweils 
+            //sichtbar, wenn in der Treeview ein Item augerufen wird
+
+
+
+          
+
         private void btn_berechnen_Click(object sender, RoutedEventArgs e)
         {
             double m = Convert.ToDouble(tb_modul.Text);
