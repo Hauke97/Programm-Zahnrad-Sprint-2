@@ -42,11 +42,12 @@ namespace Sprint2_experiment
             double z = Convert.ToDouble(tb_zähnezahl.Text);
             double d = Convert.ToDouble(tb_teilkreisdurchmesser1.Text);
 
+            m = d / z;
             z = d / m;
             double p = Math.PI * m;
             d = m * z;
             double c = 0.167 * m;
-            double df = 2 * (m + c) - d;
+            double df = d - 2 * (m + c);
             double da = 2 * m + d;
             double h = 2 * m + c;
             double hf = m + c;

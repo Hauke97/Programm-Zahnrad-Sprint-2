@@ -29,9 +29,9 @@
         <Label x:Name="lab_zahnkopfhöhe" Content="Zahnkopfhöhe:" HorizontalAlignment="Left" Margin="474,290,0,0" VerticalAlignment="Top"/>
         <TreeView HorizontalAlignment="Left" Height="445" VerticalAlignment="Top" Width="205" Margin="0,0,0,-0.2"/>
         <TreeViewItem Header="Eingabeparameter" IsExpanded="True">
-            <TreeViewItem x:Name="itmModul" Header="Modul, Teilkreisdurchmesser"></TreeViewItem>
-            <TreeViewItem x:Name="itmTeilkreis" Header="Teilkreisdurchmesser, Zaehnezahl"></TreeViewItem>
-            <TreeViewItem x:Name="itmZahn" Header="Modul, Zaehnezahl"></TreeViewItem>
+            <TreeViewItem x:Name="itmModul" Header="Modul, Teilkreisdurchmesser" Width="780" FontSize="10"></TreeViewItem>
+            <TreeViewItem x:Name="itmTeilkreis" Header="Teilkreisdurchmesser, Zaehnezahl" FontSize="10"></TreeViewItem>
+            <TreeViewItem x:Name="itmZahn" Header="Modul, Zaehnezahl" FontSize="10"></TreeViewItem>
         </TreeViewItem>
     </Grid>
 </UserControl>
