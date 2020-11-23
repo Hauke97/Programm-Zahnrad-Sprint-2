@@ -12,7 +12,7 @@ namespace Sprint2_experiment
         Program()
         {
             Window fenster = new Window();
-            fenster.Title = "MeinFenster";
+            fenster.Title = "Mein Fenster";
 
             UserControl1 myGUI = new UserControl1();
             fenster.Content = myGUI;
