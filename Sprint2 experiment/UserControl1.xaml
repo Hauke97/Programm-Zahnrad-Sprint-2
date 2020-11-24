@@ -7,12 +7,12 @@
              mc:Ignorable="d" Height="445.082" Width="801.23">
     <Grid x:Name="grid">
         <Button x:Name="btn_berechnen" Content="Berechnen" Margin="0,0,59,40" FontSize="24" Height="60" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="157" Click="btn_berechnen_Click"/>
-        <TextBox x:Name="tb_modul" HorizontalAlignment="Left" Height="45" Margin="331,49,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" FontSize="48"/>
-        <TextBox x:Name="tb_zähnezahl" HorizontalAlignment="Left" Height="45" Margin="331,143,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" FontSize="48"/>
-        <TextBox x:Name="tb_teilkreisdurchmesser" HorizontalAlignment="Left" Height="45" Margin="331,290,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" FontSize="48" RenderTransformOrigin="1.251,0.481"/>
-        <Label x:Name="lab_modul" Content="Modul:" HorizontalAlignment="Left" Margin="205,61,0,0" VerticalAlignment="Top" Width="95" RenderTransformOrigin="1.313,0.627" Height="33" FontSize="18"/>
-        <Label x:Name="lab_zähnezahl" Content="Zähnezahl:" HorizontalAlignment="Left" Margin="220,154,0,0" VerticalAlignment="Top" Width="106" FontSize="18"/>
-        <Label x:Name="lab_teilkreisdurchmesser" Content="Teilkreisdurchmesser:" HorizontalAlignment="Left" Margin="205,250,0,0" VerticalAlignment="Top" Width="198" FontSize="18"/>
+        <TextBox x:Name="tb_modul" HorizontalAlignment="Left" Height="45" Margin="305,49,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" FontSize="48"/>
+        <TextBox x:Name="tb_zähnezahl" HorizontalAlignment="Left" Height="45" Margin="305,167,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" FontSize="48"/>
+        <TextBox x:Name="tb_teilkreisdurchmesser" HorizontalAlignment="Left" Height="45" Margin="305,281,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" FontSize="48" RenderTransformOrigin="1.251,0.481"/>
+        <Label x:Name="lab_modul" Content="Modul:" HorizontalAlignment="Left" Margin="102,61,0,0" VerticalAlignment="Top" Width="95" RenderTransformOrigin="1.313,0.627" Height="33" FontSize="18"/>
+        <Label x:Name="lab_zähnezahl" Content="Zähnezahl:" HorizontalAlignment="Left" Margin="102,178,0,0" VerticalAlignment="Top" Width="106" FontSize="18"/>
+        <Label x:Name="lab_teilkreisdurchmesser" Content="Teilkreisdurchmesser:" HorizontalAlignment="Left" Margin="102,292,0,0" VerticalAlignment="Top" Width="198" FontSize="18"/>
         <TextBox x:Name="tb_teilung" HorizontalAlignment="Left" Height="20" Margin="603,49,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="106"/>
         <TextBox x:Name="tb_kopfspiel" HorizontalAlignment="Left" Height="20" Margin="603,85,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="106"/>
         <TextBox x:Name="tb_fußkreisdurchmesser" HorizontalAlignment="Left" Height="20" Margin="603,124,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="106" RenderTransformOrigin="0.214,-0.146"/>
@@ -27,11 +27,7 @@
         <Label x:Name="lab_zahnhöhe" Content="Zahnhöhe:" HorizontalAlignment="Left" Margin="474,202,0,0" VerticalAlignment="Top"/>
         <Label x:Name="lab_zahnfußhöhe" Content="Zahnfußhöhe:" HorizontalAlignment="Left" Margin="474,244,0,0" VerticalAlignment="Top"/>
         <Label x:Name="lab_zahnkopfhöhe" Content="Zahnkopfhöhe:" HorizontalAlignment="Left" Margin="474,290,0,0" VerticalAlignment="Top"/>
-        <TreeView HorizontalAlignment="Left" Height="445" VerticalAlignment="Top" Width="205" Margin="0,0,0,-0.2"/>
-        <TreeViewItem Header="Eingabeparameter" IsExpanded="True">
-            <TreeViewItem x:Name="itmModul" Header="Modul, Teilkreisdurchmesser" Width="780" FontSize="10"></TreeViewItem>
-            <TreeViewItem x:Name="itmTeilkreis" Header="Teilkreisdurchmesser, Zaehnezahl" FontSize="10"></TreeViewItem>
-            <TreeViewItem x:Name="itmZahn" Header="Modul, Zaehnezahl" FontSize="10"></TreeViewItem>
-        </TreeViewItem>
+        <Button x:Name="btn_beenden" Content="Beenden" HorizontalAlignment="Left" Margin="389,345,0,0" VerticalAlignment="Top" Width="135" Click="btn_beenden_Click" Height="60" FontSize="24"/>
+
     </Grid>
 </UserControl>
