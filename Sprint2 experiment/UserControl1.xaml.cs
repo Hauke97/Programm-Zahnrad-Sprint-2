@@ -24,17 +24,12 @@ namespace Sprint2_experiment
         {
             InitializeComponent();
         }
-  
 
+        private void btn_beenden_Click(object sender, RoutedEventArgs e)
+        {
+            Environment.Exit(0);
+        }
 
-        //private void
-        //{
-            //Wennn das Programm aufgerufen wird, sind zunächst alle Textboxen und Labels unsichtbar geschaltet. Die benötigten werden jeweils 
-            //sichtbar, wenn in der Treeview ein Item augerufen wird
-
-
-
-          
 
         private void btn_berechnen_Click(object sender, RoutedEventArgs e)
         {
@@ -108,6 +103,6 @@ namespace Sprint2_experiment
 
         }
 
-       
+      
     }
 }
