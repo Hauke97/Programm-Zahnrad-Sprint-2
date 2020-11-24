@@ -7,12 +7,10 @@
              mc:Ignorable="d" Height="445.082" Width="801.23">
     <Grid x:Name="grid">
         <Button x:Name="btn_berechnen" Content="Berechnen" Margin="0,0,59,40" FontSize="24" Height="60" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="157" Click="btn_berechnen_Click"/>
-        <TextBox x:Name="tb_modul" HorizontalAlignment="Left" Height="45" Margin="305,49,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" FontSize="48"/>
-        <TextBox x:Name="tb_zähnezahl" HorizontalAlignment="Left" Height="45" Margin="305,167,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" FontSize="48"/>
-        <TextBox x:Name="tb_teilkreisdurchmesser" HorizontalAlignment="Left" Height="45" Margin="305,281,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" FontSize="48" RenderTransformOrigin="1.251,0.481"/>
-        <Label x:Name="lab_modul" Content="Modul:" HorizontalAlignment="Left" Margin="102,61,0,0" VerticalAlignment="Top" Width="95" RenderTransformOrigin="1.313,0.627" Height="33" FontSize="18"/>
-        <Label x:Name="lab_zähnezahl" Content="Zähnezahl:" HorizontalAlignment="Left" Margin="102,178,0,0" VerticalAlignment="Top" Width="106" FontSize="18"/>
-        <Label x:Name="lab_teilkreisdurchmesser" Content="Teilkreisdurchmesser:" HorizontalAlignment="Left" Margin="102,292,0,0" VerticalAlignment="Top" Width="198" FontSize="18"/>
+        <TextBox x:Name="tb_oben" HorizontalAlignment="Left" Height="45" Margin="344,49,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" FontSize="36"/>
+        <TextBox x:Name="tb_unten" HorizontalAlignment="Left" Height="45" Margin="344,168,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" FontSize="36"/>
+        <Label x:Name="lab_oben" Content="Modul:" HorizontalAlignment="Left" Margin="233,61,0,0" VerticalAlignment="Top" Width="95" RenderTransformOrigin="1.313,0.627" Height="33" FontSize="18"/>
+        <Label x:Name="lab_unten" Content="Zähnezahl:" HorizontalAlignment="Left" Margin="233,178,0,0" VerticalAlignment="Top" Width="106" FontSize="18"/>
         <TextBox x:Name="tb_teilung" HorizontalAlignment="Left" Height="20" Margin="603,49,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="106"/>
         <TextBox x:Name="tb_kopfspiel" HorizontalAlignment="Left" Height="20" Margin="603,85,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="106"/>
         <TextBox x:Name="tb_fußkreisdurchmesser" HorizontalAlignment="Left" Height="20" Margin="603,124,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="106" RenderTransformOrigin="0.214,-0.146"/>
@@ -28,6 +26,13 @@
         <Label x:Name="lab_zahnfußhöhe" Content="Zahnfußhöhe:" HorizontalAlignment="Left" Margin="474,244,0,0" VerticalAlignment="Top"/>
         <Label x:Name="lab_zahnkopfhöhe" Content="Zahnkopfhöhe:" HorizontalAlignment="Left" Margin="474,290,0,0" VerticalAlignment="Top"/>
         <Button x:Name="btn_beenden" Content="Beenden" HorizontalAlignment="Left" Margin="389,345,0,0" VerticalAlignment="Top" Width="135" Click="btn_beenden_Click" Height="60" FontSize="24"/>
+        <TreeView x:Name="trv_1" HorizontalAlignment="Left" Height="425" Margin="10,10,0,0" VerticalAlignment="Top" Width="218">
+            <TreeViewItem x:Name="itm_Eingabe" Header="Eingabeparameter" >
+                <TreeViewItem x:Name="itm_Modul" Header="Modul, Zähnezahl" Selected="itm_Modul_Selected"/>
+                <TreeViewItem x:Name="itm_Zahn" Header="Zähnezahl, Teilkreisdurchmesser" Selected="itm_Zahn_Selected"/>
+                <TreeViewItem x:Name="itm_Teilkreis" Header="Teilkreisdurchmesser, Modul" Selected="itm_Teilkreis_Selected" />
+            </TreeViewItem>
+        </TreeView>
 
     </Grid>
 </UserControl>

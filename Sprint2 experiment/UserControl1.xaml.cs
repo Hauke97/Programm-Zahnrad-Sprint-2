@@ -25,6 +25,31 @@ namespace Sprint2_experiment
             InitializeComponent();
         }
 
+        
+         
+
+        private void itm_Modul_Selected(object sender, RoutedEventArgs e)
+        {
+            lab_oben.Content = "Modul:";
+            lab_unten.Content = "Zähnezahl:";
+
+        }
+
+        private void itm_Zahn_Selected(object sender, RoutedEventArgs e)
+        {
+            lab_oben.Content = "Zähnezahl:";
+            lab_unten.Content = "Teilkreisdurchmesser:";
+
+        }
+
+        private void itm_Teilkreis_Selected(object sender, RoutedEventArgs e)
+        {
+            lab_oben.Content = "Modul:";
+            lab_unten.Content = "Teilkreisdurchmesser:";
+
+        }
+
+
         private void btn_beenden_Click(object sender, RoutedEventArgs e)
         {
             Environment.Exit(0);
@@ -33,16 +58,17 @@ namespace Sprint2_experiment
 
         private void btn_berechnen_Click(object sender, RoutedEventArgs e)
         {
-            double m = Convert.ToDouble(tb_modul.Text);
-            double z = Convert.ToDouble(tb_zähnezahl.Text);
-            double d = Convert.ToDouble(tb_teilkreisdurchmesser.Text);
 
 
 
 
 
-            if (m != 0 && z != 0)
+            if (trv_1.SelectedItem.Equals(itm_Modul))
             {
+                double m = Convert.ToDouble(tb_oben.Text);
+                double z = Convert.ToDouble(tb_unten.Text);
+                double d;
+
                 double p = Math.PI / m;
                 d = m * z;
                 double c = 0.167 * m;
@@ -61,9 +87,14 @@ namespace Sprint2_experiment
             }
 
 
-            else if (m != 0 && d != 0)
+            else if (trv_1.SelectedItem.Equals(itm_Zahn))
             {
-                z = d / m;
+
+                double m;
+                double z = Convert.ToDouble(tb_oben.Text);
+                double d = Convert.ToDouble(tb_unten.Text);
+
+                m = d / z;
                 double p = Math.PI / m;
                 double c = 0.167 * m;
                 double df = d - 2 * (m + c);
@@ -81,9 +112,14 @@ namespace Sprint2_experiment
                 tb_kopfspiel.Text = Convert.ToString(c);
             }
 
-            else if (z != 0 && d != 0)
+            else if (trv_1.SelectedItem.Equals(itm_Teilkreis))
             {
-                m = d / z;
+
+                double m = Convert.ToDouble(tb_oben.Text);
+                double z;
+                double d = Convert.ToDouble(tb_unten.Text);
+
+                z = d / m;
                 double p = Math.PI / m;
                 double c = 0.167 * m;
                 double df = d - 2 * (m + c);
@@ -103,6 +139,6 @@ namespace Sprint2_experiment
 
         }
 
-      
+        
     }
 }
