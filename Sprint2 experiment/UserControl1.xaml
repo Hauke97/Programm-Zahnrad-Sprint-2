@@ -7,10 +7,10 @@
              mc:Ignorable="d" Height="445.082" Width="801.23">
     <Grid x:Name="grid">
         <Button x:Name="btn_berechnen" Content="Berechnen" Margin="0,0,59,40" FontSize="24" Height="60" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="157" Click="btn_berechnen_Click"/>
-        <TextBox x:Name="tb_oben" HorizontalAlignment="Left" Height="45" Margin="344,49,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" FontSize="36"/>
-        <TextBox x:Name="tb_unten" HorizontalAlignment="Left" Height="45" Margin="344,168,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" FontSize="36"/>
-        <Label x:Name="lab_oben" Content="Modul:" HorizontalAlignment="Left" Margin="233,61,0,0" VerticalAlignment="Top" Width="95" RenderTransformOrigin="1.313,0.627" Height="33" FontSize="18"/>
-        <Label x:Name="lab_unten" Content="Zähnezahl:" HorizontalAlignment="Left" Margin="233,178,0,0" VerticalAlignment="Top" Width="106" FontSize="18"/>
+        <TextBox x:Name="tb_oben" HorizontalAlignment="Left" Height="45" Margin="374,49,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="70" FontSize="36"/>
+        <TextBox x:Name="tb_unten" HorizontalAlignment="Left" Height="45" Margin="374,168,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="70" FontSize="36"/>
+        <Label x:Name="lab_oben"  HorizontalAlignment="Left" Margin="233,61,0,0" VerticalAlignment="Top" Width="95" RenderTransformOrigin="1.313,0.627" Height="33"/>
+        <Label x:Name="lab_unten"  HorizontalAlignment="Left" Margin="233,178,0,0" VerticalAlignment="Top" Width="136" Height="35"/>
         <TextBox x:Name="tb_teilung" HorizontalAlignment="Left" Height="20" Margin="603,49,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="106"/>
         <TextBox x:Name="tb_kopfspiel" HorizontalAlignment="Left" Height="20" Margin="603,85,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="106"/>
         <TextBox x:Name="tb_fußkreisdurchmesser" HorizontalAlignment="Left" Height="20" Margin="603,124,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="106" RenderTransformOrigin="0.214,-0.146"/>

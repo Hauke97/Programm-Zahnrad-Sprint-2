@@ -26,13 +26,25 @@ namespace Sprint2_experiment
         }
 
         
+            
          
-
+        //Bei Auswahl eines TreeViewItems ändern sich die Inhalte der Labels
         private void itm_Modul_Selected(object sender, RoutedEventArgs e)
         {
             lab_oben.Content = "Modul:";
             lab_unten.Content = "Zähnezahl:";
 
+            //Bei Auswahl eines neuen Items werden die Inhalte der Textboxen gelöscht
+            tb_fußkreisdurchmesser.Clear();
+            tb_kopfkreisdurchmesser.Clear();
+            tb_kopfspiel.Clear();
+            tb_oben.Clear();
+            tb_teilung.Clear();
+            tb_unten.Clear();
+            tb_zahnfußhöhe.Clear();
+            tb_zahnhöhe.Clear();
+            tb_zahnkopfhöhe.Clear();
+            
         }
 
         private void itm_Zahn_Selected(object sender, RoutedEventArgs e)
@@ -40,6 +52,15 @@ namespace Sprint2_experiment
             lab_oben.Content = "Zähnezahl:";
             lab_unten.Content = "Teilkreisdurchmesser:";
 
+            tb_fußkreisdurchmesser.Clear();
+            tb_kopfkreisdurchmesser.Clear();
+            tb_kopfspiel.Clear();
+            tb_oben.Clear();
+            tb_teilung.Clear();
+            tb_unten.Clear();
+            tb_zahnfußhöhe.Clear();
+            tb_zahnhöhe.Clear();
+            tb_zahnkopfhöhe.Clear();
         }
 
         private void itm_Teilkreis_Selected(object sender, RoutedEventArgs e)
@@ -47,6 +68,16 @@ namespace Sprint2_experiment
             lab_oben.Content = "Modul:";
             lab_unten.Content = "Teilkreisdurchmesser:";
 
+
+            tb_fußkreisdurchmesser.Clear();
+            tb_kopfkreisdurchmesser.Clear();
+            tb_kopfspiel.Clear();
+            tb_oben.Clear();
+            tb_teilung.Clear();
+            tb_unten.Clear();
+            tb_zahnfußhöhe.Clear();
+            tb_zahnhöhe.Clear();
+            tb_zahnkopfhöhe.Clear();
         }
 
 
@@ -55,13 +86,13 @@ namespace Sprint2_experiment
             Environment.Exit(0);
         }
 
-
+        //Event für den Berechungsbutton
         private void btn_berechnen_Click(object sender, RoutedEventArgs e)
         {
 
 
 
-
+            //if-Schleife:Variablenzuweisung ist abhängig von der Auswahl eines TreeViewItems
 
             if (trv_1.SelectedItem.Equals(itm_Modul))
             {
