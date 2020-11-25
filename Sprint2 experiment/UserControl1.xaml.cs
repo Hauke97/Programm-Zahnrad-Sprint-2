@@ -34,6 +34,10 @@ namespace Sprint2_experiment
             lab_oben.Content = "Modul:";
             lab_unten.Content = "Zähnezahl:";
 
+            //Textboxen für die Parametereingabe werden sichtbar geschaltet
+            tb_oben.Visibility = Visibility.Visible;
+            tb_unten.Visibility = Visibility.Visible;
+
             //Bei Auswahl eines neuen Items werden die Inhalte der Textboxen gelöscht
             tb_fußkreisdurchmesser.Clear();
             tb_kopfkreisdurchmesser.Clear();
@@ -44,7 +48,9 @@ namespace Sprint2_experiment
             tb_zahnfußhöhe.Clear();
             tb_zahnhöhe.Clear();
             tb_zahnkopfhöhe.Clear();
-            
+
+            //Berechnungsbutton wird freigeschaltet
+            btn_berechnen.IsEnabled = true;
         }
 
         private void itm_Zahn_Selected(object sender, RoutedEventArgs e)
@@ -52,6 +58,9 @@ namespace Sprint2_experiment
             lab_oben.Content = "Zähnezahl:";
             lab_unten.Content = "Teilkreisdurchmesser:";
 
+            tb_oben.Visibility = Visibility.Visible;
+            tb_unten.Visibility = Visibility.Visible;
+
             tb_fußkreisdurchmesser.Clear();
             tb_kopfkreisdurchmesser.Clear();
             tb_kopfspiel.Clear();
@@ -61,6 +70,9 @@ namespace Sprint2_experiment
             tb_zahnfußhöhe.Clear();
             tb_zahnhöhe.Clear();
             tb_zahnkopfhöhe.Clear();
+
+
+            btn_berechnen.IsEnabled = true;
         }
 
         private void itm_Teilkreis_Selected(object sender, RoutedEventArgs e)
@@ -68,6 +80,9 @@ namespace Sprint2_experiment
             lab_oben.Content = "Modul:";
             lab_unten.Content = "Teilkreisdurchmesser:";
 
+            tb_oben.Visibility = Visibility.Visible;
+            tb_unten.Visibility = Visibility.Visible;
+
 
             tb_fußkreisdurchmesser.Clear();
             tb_kopfkreisdurchmesser.Clear();
@@ -78,6 +93,9 @@ namespace Sprint2_experiment
             tb_zahnfußhöhe.Clear();
             tb_zahnhöhe.Clear();
             tb_zahnkopfhöhe.Clear();
+
+
+            btn_berechnen.IsEnabled = true;
         }
 
 
@@ -96,6 +114,8 @@ namespace Sprint2_experiment
 
             if (trv_1.SelectedItem.Equals(itm_Modul))
             {
+
+                //Zuweisung der Variablen über die Textboxen, je nachdem welches Item ausgewählt ist 
                 double m = Convert.ToDouble(tb_oben.Text);
                 double z = Convert.ToDouble(tb_unten.Text);
                 double d;
@@ -108,6 +128,8 @@ namespace Sprint2_experiment
                 double h = 2 * m + c;
                 double hf = m + c;
                 double ha = m;
+
+                
                 tb_fußkreisdurchmesser.Text = Convert.ToString(df);
                 tb_kopfkreisdurchmesser.Text = Convert.ToString(da);
                 tb_zahnhöhe.Text = Convert.ToString(h);
@@ -121,6 +143,7 @@ namespace Sprint2_experiment
             else if (trv_1.SelectedItem.Equals(itm_Zahn))
             {
 
+                //Zuweisung der Variablen über die Textboxen, je nachdem welches Item ausgewählt ist
                 double m;
                 double z = Convert.ToDouble(tb_oben.Text);
                 double d = Convert.ToDouble(tb_unten.Text);
@@ -146,6 +169,7 @@ namespace Sprint2_experiment
             else if (trv_1.SelectedItem.Equals(itm_Teilkreis))
             {
 
+                //Zuweisung der Variablen über die Textboxen, je nachdem welches Item ausgewählt ist
                 double m = Convert.ToDouble(tb_oben.Text);
                 double z;
                 double d = Convert.ToDouble(tb_unten.Text);
