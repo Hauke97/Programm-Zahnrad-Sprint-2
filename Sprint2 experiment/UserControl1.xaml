@@ -6,26 +6,27 @@
              xmlns:local="clr-namespace:Sprint2_experiment"
              mc:Ignorable="d" Height="445.082" Width="801.23">
     <Grid x:Name="grid">
-        
+        <!-- btn_berechnen ist beim Aufruf des Programms nicht freigeschaltet-->
         <Button x:Name="btn_berechnen" Content="Berechnen" Margin="0,0,59,40" FontSize="24" Height="60" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="157" Click="btn_berechnen_Click" IsEnabled="False"/>
+        <!-- Textboxen und Labels sind nicht sichtbar-->
         <TextBox x:Name="tb_oben" HorizontalAlignment="Left" Height="45" Margin="374,49,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="70" FontSize="36" Visibility="Hidden"/>
         <TextBox x:Name="tb_unten" HorizontalAlignment="Left" Height="45" Margin="374,168,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="70" FontSize="36" Visibility="Hidden"/>
         <Label x:Name="lab_oben"  HorizontalAlignment="Left" Margin="233,61,0,0" VerticalAlignment="Top" Width="95" RenderTransformOrigin="1.313,0.627" Height="33"/>
         <Label x:Name="lab_unten"  HorizontalAlignment="Left" Margin="233,178,0,0" VerticalAlignment="Top" Width="136" Height="35"/>
-        <TextBox x:Name="tb_teilung" HorizontalAlignment="Left" Height="20" Margin="603,49,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="106"/>
-        <TextBox x:Name="tb_kopfspiel" HorizontalAlignment="Left" Height="20" Margin="603,85,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="106"/>
-        <TextBox x:Name="tb_fußkreisdurchmesser" HorizontalAlignment="Left" Height="20" Margin="603,124,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="106" RenderTransformOrigin="0.214,-0.146"/>
-        <TextBox x:Name="tb_kopfkreisdurchmesser" HorizontalAlignment="Left" Height="20" Margin="603,168,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="106"/>
-        <TextBox x:Name="tb_zahnhöhe" HorizontalAlignment="Left" Height="20" Margin="603,208,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="106"/>
-        <TextBox x:Name="tb_zahnfußhöhe" HorizontalAlignment="Right" Height="20" Margin="0,0,92,175" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="106"/>
-        <TextBox x:Name="tb_zahnkopfhöhe" HorizontalAlignment="Right" Height="20" Margin="0,0,92,135" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="106"/>
-        <Label x:Name="lab_teilung" Content="Teilung:" HorizontalAlignment="Left" Margin="474,43,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="lab_kopfspiel" Content="Kopfspiel:" HorizontalAlignment="Left" Margin="474,79,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="lab_fußkreisdurchmesser" Content="Fußkreisdurchmesser:" HorizontalAlignment="Left" Margin="474,118,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="lab_kopfkreisdurchmesser" Content="Kopfkreisdurchmesser:" HorizontalAlignment="Left" Margin="474,162,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.008,-0.03"/>
-        <Label x:Name="lab_zahnhöhe" Content="Zahnhöhe:" HorizontalAlignment="Left" Margin="474,202,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="lab_zahnfußhöhe" Content="Zahnfußhöhe:" HorizontalAlignment="Left" Margin="474,244,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="lab_zahnkopfhöhe" Content="Zahnkopfhöhe:" HorizontalAlignment="Left" Margin="474,290,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="tb_teilung" HorizontalAlignment="Left" Height="20" Margin="603,49,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="106" Visibility="Hidden"/>
+        <TextBox x:Name="tb_kopfspiel" HorizontalAlignment="Left" Height="20" Margin="603,85,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="106" Visibility="Hidden"/>
+        <TextBox x:Name="tb_fußkreisdurchmesser" HorizontalAlignment="Left" Height="20" Margin="603,124,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="106" RenderTransformOrigin="0.214,-0.146" Visibility="Hidden"/>
+        <TextBox x:Name="tb_kopfkreisdurchmesser" HorizontalAlignment="Left" Height="20" Margin="603,168,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="106" Visibility="Hidden"/>
+        <TextBox x:Name="tb_zahnhöhe" HorizontalAlignment="Left" Height="20" Margin="603,208,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="106" Visibility="Hidden"/>
+        <TextBox x:Name="tb_zahnfußhöhe" HorizontalAlignment="Right" Height="20" Margin="0,0,92,175" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="106" Visibility="Hidden"/>
+        <TextBox x:Name="tb_zahnkopfhöhe" HorizontalAlignment="Right" Height="20" Margin="0,0,92,135" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="106" Visibility="Hidden"/>
+        <Label x:Name="lab_teilung" Content="Teilung:" HorizontalAlignment="Left" Margin="474,43,0,0" VerticalAlignment="Top" Visibility="Hidden"/>
+        <Label x:Name="lab_kopfspiel" Content="Kopfspiel:" HorizontalAlignment="Left" Margin="474,79,0,0" VerticalAlignment="Top" Visibility="Hidden"/>
+        <Label x:Name="lab_fußkreisdurchmesser" Content="Fußkreisdurchmesser:" HorizontalAlignment="Left" Margin="474,118,0,0" VerticalAlignment="Top" Visibility="Hidden"/>
+        <Label x:Name="lab_kopfkreisdurchmesser" Content="Kopfkreisdurchmesser:" HorizontalAlignment="Left" Margin="474,162,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.008,-0.03" Visibility="Hidden"/>
+        <Label x:Name="lab_zahnhöhe" Content="Zahnhöhe:" HorizontalAlignment="Left" Margin="474,202,0,0" VerticalAlignment="Top" Visibility="Hidden"/>
+        <Label x:Name="lab_zahnfußhöhe" Content="Zahnfußhöhe:" HorizontalAlignment="Left" Margin="474,244,0,0" VerticalAlignment="Top" Visibility="Hidden"/>
+        <Label x:Name="lab_zahnkopfhöhe" Content="Zahnkopfhöhe:" HorizontalAlignment="Left" Margin="474,290,0,0" VerticalAlignment="Top" Visibility="Hidden"/>
         <Button x:Name="btn_beenden" Content="Beenden" HorizontalAlignment="Left" Margin="389,345,0,0" VerticalAlignment="Top" Width="135" Click="btn_beenden_Click" Height="60" FontSize="24"/>
         <TreeView x:Name="trv_1" HorizontalAlignment="Left" Height="425" Margin="10,10,0,0" VerticalAlignment="Top" Width="218">
             <TreeViewItem x:Name="itm_Eingabe" Header="Eingabeparameter" >

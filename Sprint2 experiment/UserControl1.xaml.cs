@@ -35,9 +35,25 @@ namespace Sprint2_experiment
             lab_oben.Content = "Modul:";
             lab_unten.Content = "Zähnezahl:";
 
-            //Textboxen für die Parametereingabe werden sichtbar geschaltet
+            //Textboxen und Labels werden sichtbar geschaltet
             tb_oben.Visibility = Visibility.Visible;
             tb_unten.Visibility = Visibility.Visible;
+            tb_fußkreisdurchmesser.Visibility=Visibility.Visible;
+            tb_kopfkreisdurchmesser.Visibility = Visibility.Visible;
+            tb_kopfspiel.Visibility = Visibility.Visible;
+            tb_teilung.Visibility = Visibility.Visible;
+            tb_zahnfußhöhe.Visibility = Visibility.Visible;
+            tb_zahnhöhe.Visibility = Visibility.Visible;
+            tb_zahnkopfhöhe.Visibility = Visibility.Visible;
+            lab_fußkreisdurchmesser.Visibility = Visibility.Visible;
+            lab_kopfkreisdurchmesser.Visibility = Visibility.Visible;
+            lab_kopfspiel.Visibility = Visibility.Visible;
+            lab_teilung.Visibility = Visibility.Visible;
+            lab_zahnfußhöhe.Visibility = Visibility.Visible;
+            lab_zahnhöhe.Visibility = Visibility.Visible;
+            lab_zahnkopfhöhe.Visibility = Visibility.Visible;
+
+
 
             //Bei Auswahl eines neuen Items werden die Inhalte der Textboxen gelöscht
             tb_fußkreisdurchmesser.Clear();
@@ -59,8 +75,23 @@ namespace Sprint2_experiment
             lab_oben.Content = "Zähnezahl:";
             lab_unten.Content = "Teilkreisdurchmesser:";
 
+            //Textboxen und Labels werden sichtbar geschaltet
             tb_oben.Visibility = Visibility.Visible;
             tb_unten.Visibility = Visibility.Visible;
+            tb_fußkreisdurchmesser.Visibility = Visibility.Visible;
+            tb_kopfkreisdurchmesser.Visibility = Visibility.Visible;
+            tb_kopfspiel.Visibility = Visibility.Visible;
+            tb_teilung.Visibility = Visibility.Visible;
+            tb_zahnfußhöhe.Visibility = Visibility.Visible;
+            tb_zahnhöhe.Visibility = Visibility.Visible;
+            tb_zahnkopfhöhe.Visibility = Visibility.Visible;
+            lab_fußkreisdurchmesser.Visibility = Visibility.Visible;
+            lab_kopfkreisdurchmesser.Visibility = Visibility.Visible;
+            lab_kopfspiel.Visibility = Visibility.Visible;
+            lab_teilung.Visibility = Visibility.Visible;
+            lab_zahnfußhöhe.Visibility = Visibility.Visible;
+            lab_zahnhöhe.Visibility = Visibility.Visible;
+            lab_zahnkopfhöhe.Visibility = Visibility.Visible;
 
             //Bei Auswahl eines neuen Items werden die Inhalte der Textboxen gelöscht
             tb_fußkreisdurchmesser.Clear();
@@ -82,8 +113,23 @@ namespace Sprint2_experiment
             lab_oben.Content = "Modul:";
             lab_unten.Content = "Teilkreisdurchmesser:";
 
+            //Textboxen und Labels werden sichtbar geschaltet
             tb_oben.Visibility = Visibility.Visible;
             tb_unten.Visibility = Visibility.Visible;
+            tb_fußkreisdurchmesser.Visibility = Visibility.Visible;
+            tb_kopfkreisdurchmesser.Visibility = Visibility.Visible;
+            tb_kopfspiel.Visibility = Visibility.Visible;
+            tb_teilung.Visibility = Visibility.Visible;
+            tb_zahnfußhöhe.Visibility = Visibility.Visible;
+            tb_zahnhöhe.Visibility = Visibility.Visible;
+            tb_zahnkopfhöhe.Visibility = Visibility.Visible;
+            lab_fußkreisdurchmesser.Visibility = Visibility.Visible;
+            lab_kopfkreisdurchmesser.Visibility = Visibility.Visible;
+            lab_kopfspiel.Visibility = Visibility.Visible;
+            lab_teilung.Visibility = Visibility.Visible;
+            lab_zahnfußhöhe.Visibility = Visibility.Visible;
+            lab_zahnhöhe.Visibility = Visibility.Visible;
+            lab_zahnkopfhöhe.Visibility = Visibility.Visible;
 
             //Bei Auswahl eines neuen Items werden die Inhalte der Textboxen gelöscht
             tb_fußkreisdurchmesser.Clear();
