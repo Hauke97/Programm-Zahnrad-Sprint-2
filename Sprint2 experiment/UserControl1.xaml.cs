@@ -105,7 +105,7 @@ namespace Sprint2_experiment
 
                 tb_fußkreisdurchmesser.Text = Convert.ToString(df);
                 tb_kopfkreisdurchmesser.Text = Convert.ToString(da);
-                tb_zahnfußhöhe.Text = Convert.ToString(h);
+                tb_zahnhöhe.Text = Convert.ToString(h);
                 tb_zahnfußhöhe.Text = Convert.ToString(hf);
                 tb_zahnkopfhöhe.Text = Convert.ToString(ha);
                 tb_teilung.Text = Convert.ToString(p);
@@ -130,7 +130,7 @@ namespace Sprint2_experiment
 
                 tb_fußkreisdurchmesser.Text = Convert.ToString(df);
                 tb_kopfkreisdurchmesser.Text = Convert.ToString(da);
-                tb_zahnfußhöhe.Text = Convert.ToString(h);
+                tb_zahnhöhe.Text = Convert.ToString(h);
                 tb_zahnfußhöhe.Text = Convert.ToString(hf);
                 tb_zahnkopfhöhe.Text = Convert.ToString(ha);
                 tb_teilung.Text = Convert.ToString(p);
