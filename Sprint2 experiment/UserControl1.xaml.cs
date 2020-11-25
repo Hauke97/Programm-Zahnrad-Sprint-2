@@ -31,6 +31,7 @@ namespace Sprint2_experiment
         //Bei Auswahl eines TreeViewItems ändern sich die Inhalte der Labels
         private void itm_Modul_Selected(object sender, RoutedEventArgs e)
         {
+            //Die Labels ändern sich in Abhängigkeit des ausgewählten TreeViewItems
             lab_oben.Content = "Modul:";
             lab_unten.Content = "Zähnezahl:";
 
@@ -61,6 +62,7 @@ namespace Sprint2_experiment
             tb_oben.Visibility = Visibility.Visible;
             tb_unten.Visibility = Visibility.Visible;
 
+            //Bei Auswahl eines neuen Items werden die Inhalte der Textboxen gelöscht
             tb_fußkreisdurchmesser.Clear();
             tb_kopfkreisdurchmesser.Clear();
             tb_kopfspiel.Clear();
@@ -71,7 +73,7 @@ namespace Sprint2_experiment
             tb_zahnhöhe.Clear();
             tb_zahnkopfhöhe.Clear();
 
-
+            //Berechnungsbutton wird freigeschaltet
             btn_berechnen.IsEnabled = true;
         }
 
@@ -83,7 +85,7 @@ namespace Sprint2_experiment
             tb_oben.Visibility = Visibility.Visible;
             tb_unten.Visibility = Visibility.Visible;
 
-
+            //Bei Auswahl eines neuen Items werden die Inhalte der Textboxen gelöscht
             tb_fußkreisdurchmesser.Clear();
             tb_kopfkreisdurchmesser.Clear();
             tb_kopfspiel.Clear();
@@ -94,11 +96,11 @@ namespace Sprint2_experiment
             tb_zahnhöhe.Clear();
             tb_zahnkopfhöhe.Clear();
 
-
+            //Berechnungsbutton wird freigeschaltet
             btn_berechnen.IsEnabled = true;
         }
 
-
+        //Event für den BeendenButton
         private void btn_beenden_Click(object sender, RoutedEventArgs e)
         {
             Environment.Exit(0);
@@ -120,6 +122,7 @@ namespace Sprint2_experiment
                 double z = Convert.ToDouble(tb_unten.Text);
                 double d;
 
+                //Berechnungen mittels Modul und Zähnezahl
                 double p = Math.PI / m;
                 d = m * z;
                 double c = 0.167 * m;
@@ -129,7 +132,7 @@ namespace Sprint2_experiment
                 double hf = m + c;
                 double ha = m;
 
-                
+                //Rückgabbe der berechneten Werte an die Textboxen
                 tb_fußkreisdurchmesser.Text = Convert.ToString(df);
                 tb_kopfkreisdurchmesser.Text = Convert.ToString(da);
                 tb_zahnhöhe.Text = Convert.ToString(h);
@@ -148,6 +151,7 @@ namespace Sprint2_experiment
                 double z = Convert.ToDouble(tb_oben.Text);
                 double d = Convert.ToDouble(tb_unten.Text);
 
+                //Berechnungen mittels Zähnezahl und Teilkreisdurchmesser
                 m = d / z;
                 double p = Math.PI / m;
                 double c = 0.167 * m;
@@ -157,6 +161,7 @@ namespace Sprint2_experiment
                 double hf = m + c;
                 double ha = m;
 
+                //Rückgabe der berechneten Werte an die Textboxen
                 tb_fußkreisdurchmesser.Text = Convert.ToString(df);
                 tb_kopfkreisdurchmesser.Text = Convert.ToString(da);
                 tb_zahnhöhe.Text = Convert.ToString(h);
@@ -174,6 +179,7 @@ namespace Sprint2_experiment
                 double z;
                 double d = Convert.ToDouble(tb_unten.Text);
 
+                //Berechnungen mittels Modul und Teilkreisdurchmesser
                 z = d / m;
                 double p = Math.PI / m;
                 double c = 0.167 * m;
@@ -183,6 +189,7 @@ namespace Sprint2_experiment
                 double hf = m + c;
                 double ha = m;
 
+                //Rückgabe der berechneten Werte an die Textboxen 
                 tb_fußkreisdurchmesser.Text = Convert.ToString(df);
                 tb_kopfkreisdurchmesser.Text = Convert.ToString(da);
                 tb_zahnhöhe.Text = Convert.ToString(h);
