@@ -35,17 +35,9 @@ namespace Sprint2_experiment
             lab_oben.Content = "Modul:";
             lab_unten.Content = "Zähnezahl:";
 
-            //Textboxen und Labels werden sichtbar geschaltet
+            //Textboxen für die Eingabe und Labels werden sichtbar geschaltet
             tb_oben.Visibility = Visibility.Visible;
             tb_unten.Visibility = Visibility.Visible;
-            tb_fußkreisdurchmesser.Visibility=Visibility.Visible;
-            tb_kopfkreisdurchmesser.Visibility = Visibility.Visible;
-            tb_kopfspiel.Visibility = Visibility.Visible;
-            tb_teilung.Visibility = Visibility.Visible;
-            tb_zahnfußhöhe.Visibility = Visibility.Visible;
-            tb_zahnhöhe.Visibility = Visibility.Visible;
-            tb_zahnkopfhöhe.Visibility = Visibility.Visible;
-            tb_grundkreisdurchmesser.Visibility = Visibility.Visible;
             lab_fußkreisdurchmesser.Visibility = Visibility.Visible;
             lab_kopfkreisdurchmesser.Visibility = Visibility.Visible;
             lab_kopfspiel.Visibility = Visibility.Visible;
@@ -79,17 +71,9 @@ namespace Sprint2_experiment
             lab_oben.Content = "Zähnezahl:";
             lab_unten.Content = "Teilkreisdurchmesser:";
 
-            //Textboxen und Labels werden sichtbar geschaltet
+            //Textboxen für die Eingabe und Labels werden sichtbar geschaltet
             tb_oben.Visibility = Visibility.Visible;
             tb_unten.Visibility = Visibility.Visible;
-            tb_fußkreisdurchmesser.Visibility = Visibility.Visible;
-            tb_kopfkreisdurchmesser.Visibility = Visibility.Visible;
-            tb_kopfspiel.Visibility = Visibility.Visible;
-            tb_teilung.Visibility = Visibility.Visible;
-            tb_zahnfußhöhe.Visibility = Visibility.Visible;
-            tb_zahnhöhe.Visibility = Visibility.Visible;
-            tb_zahnkopfhöhe.Visibility = Visibility.Visible;
-            tb_grundkreisdurchmesser.Visibility = Visibility.Visible;
             lab_fußkreisdurchmesser.Visibility = Visibility.Visible;
             lab_kopfkreisdurchmesser.Visibility = Visibility.Visible;
             lab_kopfspiel.Visibility = Visibility.Visible;
@@ -122,17 +106,9 @@ namespace Sprint2_experiment
             lab_oben.Content = "Modul:";
             lab_unten.Content = "Teilkreisdurchmesser:";
 
-            //Textboxen und Labels werden sichtbar geschaltet
+            //Textboxen für die Eingabe und Labels werden sichtbar geschaltet
             tb_oben.Visibility = Visibility.Visible;
             tb_unten.Visibility = Visibility.Visible;
-            tb_fußkreisdurchmesser.Visibility = Visibility.Visible;
-            tb_kopfkreisdurchmesser.Visibility = Visibility.Visible;
-            tb_kopfspiel.Visibility = Visibility.Visible;
-            tb_teilung.Visibility = Visibility.Visible;
-            tb_zahnfußhöhe.Visibility = Visibility.Visible;
-            tb_zahnhöhe.Visibility = Visibility.Visible;
-            tb_zahnkopfhöhe.Visibility = Visibility.Visible;
-            tb_grundkreisdurchmesser.Visibility = Visibility.Visible;
             lab_fußkreisdurchmesser.Visibility = Visibility.Visible;
             lab_kopfkreisdurchmesser.Visibility = Visibility.Visible;
             lab_kopfspiel.Visibility = Visibility.Visible;
@@ -194,6 +170,17 @@ namespace Sprint2_experiment
                 double a = 20;
                 double db = m * z + Math.Cos(a);
 
+                //Textboxen für die Ausgabe werden sichtbar geschaltet
+                tb_fußkreisdurchmesser.Visibility = Visibility.Visible;
+                tb_kopfkreisdurchmesser.Visibility = Visibility.Visible;
+                tb_kopfspiel.Visibility = Visibility.Visible;
+                tb_teilung.Visibility = Visibility.Visible;
+                tb_zahnfußhöhe.Visibility = Visibility.Visible;
+                tb_zahnhöhe.Visibility = Visibility.Visible;
+                tb_zahnkopfhöhe.Visibility = Visibility.Visible;
+                tb_grundkreisdurchmesser.Visibility = Visibility.Visible;
+              
+
 
                 //Rückgabbe der berechneten Werte an die Textboxen
                 tb_fußkreisdurchmesser.Text = Convert.ToString(df);
@@ -230,6 +217,17 @@ namespace Sprint2_experiment
                 double a = 20;
                 double db = m * z * Math.Cos(a);
 
+                //Textboxen für die Ausgabe werden sichtbar geschaltet
+                tb_fußkreisdurchmesser.Visibility = Visibility.Visible;
+                tb_kopfkreisdurchmesser.Visibility = Visibility.Visible;
+                tb_kopfspiel.Visibility = Visibility.Visible;
+                tb_teilung.Visibility = Visibility.Visible;
+                tb_zahnfußhöhe.Visibility = Visibility.Visible;
+                tb_zahnhöhe.Visibility = Visibility.Visible;
+                tb_zahnkopfhöhe.Visibility = Visibility.Visible;
+                tb_grundkreisdurchmesser.Visibility = Visibility.Visible;
+                
+
                 //Rückgabe der berechneten Werte an die Textboxen
                 tb_fußkreisdurchmesser.Text = Convert.ToString(df);
                 tb_kopfkreisdurchmesser.Text = Convert.ToString(da);
@@ -261,6 +259,17 @@ namespace Sprint2_experiment
                 double ha = m;
                 double a = 20;
                 double db = m * z * Math.Cos(a);
+
+                //Textboxen für die Ausgabe werden sichtbar geschaltet
+                tb_fußkreisdurchmesser.Visibility = Visibility.Visible;
+                tb_kopfkreisdurchmesser.Visibility = Visibility.Visible;
+                tb_kopfspiel.Visibility = Visibility.Visible;
+                tb_teilung.Visibility = Visibility.Visible;
+                tb_zahnfußhöhe.Visibility = Visibility.Visible;
+                tb_zahnhöhe.Visibility = Visibility.Visible;
+                tb_zahnkopfhöhe.Visibility = Visibility.Visible;
+                tb_grundkreisdurchmesser.Visibility = Visibility.Visible;
+                
 
                 //Rückgabe der berechneten Werte an die Textboxen 
                 tb_fußkreisdurchmesser.Text = Convert.ToString(df);
