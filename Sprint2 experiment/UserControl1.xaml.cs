@@ -45,6 +45,7 @@ namespace Sprint2_experiment
             tb_zahnfußhöhe.Visibility = Visibility.Visible;
             tb_zahnhöhe.Visibility = Visibility.Visible;
             tb_zahnkopfhöhe.Visibility = Visibility.Visible;
+            tb_grundkreisdurchmesser.Visibility = Visibility.Visible;
             lab_fußkreisdurchmesser.Visibility = Visibility.Visible;
             lab_kopfkreisdurchmesser.Visibility = Visibility.Visible;
             lab_kopfspiel.Visibility = Visibility.Visible;
@@ -52,6 +53,8 @@ namespace Sprint2_experiment
             lab_zahnfußhöhe.Visibility = Visibility.Visible;
             lab_zahnhöhe.Visibility = Visibility.Visible;
             lab_zahnkopfhöhe.Visibility = Visibility.Visible;
+            lab_grundkreisdurchmesser.Visibility = Visibility.Visible;
+            lab_Zahnrad.Visibility = Visibility.Hidden;
 
 
 
@@ -65,6 +68,7 @@ namespace Sprint2_experiment
             tb_zahnfußhöhe.Clear();
             tb_zahnhöhe.Clear();
             tb_zahnkopfhöhe.Clear();
+            tb_grundkreisdurchmesser.Clear();
 
             //Berechnungsbutton wird freigeschaltet
             btn_berechnen.IsEnabled = true;
@@ -85,6 +89,7 @@ namespace Sprint2_experiment
             tb_zahnfußhöhe.Visibility = Visibility.Visible;
             tb_zahnhöhe.Visibility = Visibility.Visible;
             tb_zahnkopfhöhe.Visibility = Visibility.Visible;
+            tb_grundkreisdurchmesser.Visibility = Visibility.Visible;
             lab_fußkreisdurchmesser.Visibility = Visibility.Visible;
             lab_kopfkreisdurchmesser.Visibility = Visibility.Visible;
             lab_kopfspiel.Visibility = Visibility.Visible;
@@ -92,6 +97,8 @@ namespace Sprint2_experiment
             lab_zahnfußhöhe.Visibility = Visibility.Visible;
             lab_zahnhöhe.Visibility = Visibility.Visible;
             lab_zahnkopfhöhe.Visibility = Visibility.Visible;
+            lab_grundkreisdurchmesser.Visibility = Visibility.Visible;
+            lab_Zahnrad.Visibility = Visibility.Hidden;
 
             //Bei Auswahl eines neuen Items werden die Inhalte der Textboxen gelöscht
             tb_fußkreisdurchmesser.Clear();
@@ -103,6 +110,8 @@ namespace Sprint2_experiment
             tb_zahnfußhöhe.Clear();
             tb_zahnhöhe.Clear();
             tb_zahnkopfhöhe.Clear();
+            tb_grundkreisdurchmesser.Clear();
+
 
             //Berechnungsbutton wird freigeschaltet
             btn_berechnen.IsEnabled = true;
@@ -123,6 +132,7 @@ namespace Sprint2_experiment
             tb_zahnfußhöhe.Visibility = Visibility.Visible;
             tb_zahnhöhe.Visibility = Visibility.Visible;
             tb_zahnkopfhöhe.Visibility = Visibility.Visible;
+            tb_grundkreisdurchmesser.Visibility = Visibility.Visible;
             lab_fußkreisdurchmesser.Visibility = Visibility.Visible;
             lab_kopfkreisdurchmesser.Visibility = Visibility.Visible;
             lab_kopfspiel.Visibility = Visibility.Visible;
@@ -130,6 +140,9 @@ namespace Sprint2_experiment
             lab_zahnfußhöhe.Visibility = Visibility.Visible;
             lab_zahnhöhe.Visibility = Visibility.Visible;
             lab_zahnkopfhöhe.Visibility = Visibility.Visible;
+            lab_grundkreisdurchmesser.Visibility = Visibility.Visible;
+            lab_Zahnrad.Visibility = Visibility.Hidden;
+
 
             //Bei Auswahl eines neuen Items werden die Inhalte der Textboxen gelöscht
             tb_fußkreisdurchmesser.Clear();
@@ -141,6 +154,7 @@ namespace Sprint2_experiment
             tb_zahnfußhöhe.Clear();
             tb_zahnhöhe.Clear();
             tb_zahnkopfhöhe.Clear();
+            tb_grundkreisdurchmesser.Clear();
 
             //Berechnungsbutton wird freigeschaltet
             btn_berechnen.IsEnabled = true;
@@ -177,6 +191,9 @@ namespace Sprint2_experiment
                 double h = 2 * m + c;
                 double hf = m + c;
                 double ha = m;
+                double a = 20;
+                double db = m * z + Math.Cos(a);
+
 
                 //Rückgabbe der berechneten Werte an die Textboxen
                 tb_fußkreisdurchmesser.Text = Convert.ToString(df);
@@ -186,6 +203,10 @@ namespace Sprint2_experiment
                 tb_zahnkopfhöhe.Text = Convert.ToString(ha);
                 tb_teilung.Text = Convert.ToString(p);
                 tb_kopfspiel.Text = Convert.ToString(c);
+                tb_grundkreisdurchmesser.Text = Convert.ToString(db); 
+
+
+
             }
 
 
@@ -206,6 +227,8 @@ namespace Sprint2_experiment
                 double h = 2 * m + c;
                 double hf = m + c;
                 double ha = m;
+                double a = 20;
+                double db = m * z * Math.Cos(a);
 
                 //Rückgabe der berechneten Werte an die Textboxen
                 tb_fußkreisdurchmesser.Text = Convert.ToString(df);
@@ -215,6 +238,8 @@ namespace Sprint2_experiment
                 tb_zahnkopfhöhe.Text = Convert.ToString(ha);
                 tb_teilung.Text = Convert.ToString(p);
                 tb_kopfspiel.Text = Convert.ToString(c);
+                tb_grundkreisdurchmesser.Text = Convert.ToString(db);
+
             }
 
             else if (trv_1.SelectedItem.Equals(itm_Teilkreis))
@@ -234,6 +259,8 @@ namespace Sprint2_experiment
                 double h = 2 * m + c;
                 double hf = m + c;
                 double ha = m;
+                double a = 20;
+                double db = m * z * Math.Cos(a);
 
                 //Rückgabe der berechneten Werte an die Textboxen 
                 tb_fußkreisdurchmesser.Text = Convert.ToString(df);
@@ -243,6 +270,9 @@ namespace Sprint2_experiment
                 tb_zahnkopfhöhe.Text = Convert.ToString(ha);
                 tb_teilung.Text = Convert.ToString(p);
                 tb_kopfspiel.Text = Convert.ToString(c);
+                tb_grundkreisdurchmesser.Text = Convert.ToString(db);
+
+
             }
 
         }
