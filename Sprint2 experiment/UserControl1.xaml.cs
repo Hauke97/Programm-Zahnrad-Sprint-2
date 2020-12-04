@@ -13,6 +13,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+
+
 namespace Sprint2_experiment
 {
     /// <summary>
@@ -146,7 +148,7 @@ namespace Sprint2_experiment
         private void btn_berechnen_Click(object sender, RoutedEventArgs e)
         {
 
-
+            
 
             //if-Schleife:Variablenzuweisung ist abhängig von der Auswahl eines TreeViewItems
 
@@ -154,46 +156,58 @@ namespace Sprint2_experiment
             {
 
                 //Zuweisung der Variablen über die Textboxen, je nachdem welches Item ausgewählt ist 
-                double m = Convert.ToDouble(tb_oben.Text);
+                string eingabem = tb_oben.Text;
+                double m;
                 double z = Convert.ToDouble(tb_unten.Text);
                 double d;
 
-                //Berechnungen mittels Modul und Zähnezahl
-                double p = Math.PI / m;
-                d = m * z;
-                double c = 0.167 * m;
-                double df = d - 2 * (m + c);
-                double da = d + 2 * m;
-                double h = 2 * m + c;
-                double hf = m + c;
-                double ha = m;
-                double a = 20;
-                double db = m * z + Math.Cos(a);
+                bool checkm = Double.TryParse(eingabem, out m);
 
-                //Textboxen für die Ausgabe werden sichtbar geschaltet
-                tb_fußkreisdurchmesser.Visibility = Visibility.Visible;
-                tb_kopfkreisdurchmesser.Visibility = Visibility.Visible;
-                tb_kopfspiel.Visibility = Visibility.Visible;
-                tb_teilung.Visibility = Visibility.Visible;
-                tb_zahnfußhöhe.Visibility = Visibility.Visible;
-                tb_zahnhöhe.Visibility = Visibility.Visible;
-                tb_zahnkopfhöhe.Visibility = Visibility.Visible;
-                tb_grundkreisdurchmesser.Visibility = Visibility.Visible;
-              
+                if (checkm == false)
+                {
 
+                    MessageBox.Show("Achtung!Es wurde kein numerischer Wert eingegeben.");
 
-                //Rückgabbe der berechneten Werte an die Textboxen
-                tb_fußkreisdurchmesser.Text = Convert.ToString(df);
-                tb_kopfkreisdurchmesser.Text = Convert.ToString(da);
-                tb_zahnhöhe.Text = Convert.ToString(h);
-                tb_zahnfußhöhe.Text = Convert.ToString(hf);
-                tb_zahnkopfhöhe.Text = Convert.ToString(ha);
-                tb_teilung.Text = Convert.ToString(p);
-                tb_kopfspiel.Text = Convert.ToString(c);
-                tb_grundkreisdurchmesser.Text = Convert.ToString(db); 
+                }
+                else
+                {
 
+                    //Berechnungen mittels Modul und Zähnezahl
+                    double p = Math.PI / m;
+                    d = m * z;
+                    double c = 0.167 * m;
+                    double df = d - 2 * (m + c);
+                    double da = d + 2 * m;
+                    double h = 2 * m + c;
+                    double hf = m + c;
+                    double ha = m;
+                    double a = 20;
+                    double db = m * z + Math.Cos(a);
+
+                    //Textboxen für die Ausgabe werden sichtbar geschaltet
+                    tb_fußkreisdurchmesser.Visibility = Visibility.Visible;
+                    tb_kopfkreisdurchmesser.Visibility = Visibility.Visible;
+                    tb_kopfspiel.Visibility = Visibility.Visible;
+                    tb_teilung.Visibility = Visibility.Visible;
+                    tb_zahnfußhöhe.Visibility = Visibility.Visible;
+                    tb_zahnhöhe.Visibility = Visibility.Visible;
+                    tb_zahnkopfhöhe.Visibility = Visibility.Visible;
+                    tb_grundkreisdurchmesser.Visibility = Visibility.Visible;
 
 
+
+                    //Rückgabbe der berechneten Werte an die Textboxen
+                    tb_fußkreisdurchmesser.Text = Convert.ToString(df);
+                    tb_kopfkreisdurchmesser.Text = Convert.ToString(da);
+                    tb_zahnhöhe.Text = Convert.ToString(h);
+                    tb_zahnfußhöhe.Text = Convert.ToString(hf);
+                    tb_zahnkopfhöhe.Text = Convert.ToString(ha);
+                    tb_teilung.Text = Convert.ToString(p);
+                    tb_kopfspiel.Text = Convert.ToString(c);
+                    tb_grundkreisdurchmesser.Text = Convert.ToString(db);
+
+                
+                }
             }
 
 
