@@ -157,18 +157,57 @@ namespace Sprint2_experiment
 
                 //Zuweisung der Variablen über die Textboxen, je nachdem welches Item ausgewählt ist 
                 string eingabem = tb_oben.Text;
+                string eingabez = tb_unten.Text;
                 double m;
-                double z = Convert.ToDouble(tb_unten.Text);
+                double z;
                 double d;
 
                 bool checkm = Double.TryParse(eingabem, out m);
+                bool checkz = Double.TryParse(eingabez, out z);
 
                 if (checkm == false)
                 {
 
-                    MessageBox.Show("Achtung!Es wurde kein numerischer Wert eingegeben.");
-
+                    MessageBox.Show("Achtung! Es wurde kein numerischer Wert eingegeben.");
+                    tb_oben.Focus();
+                    tb_oben.SelectAll();
                 }
+
+                else if (checkz == false)
+                {
+                    MessageBox.Show("Achtung! Es wurde kein numerischer Wert eingegeben");
+                    tb_unten.Focus();
+                    tb_unten.SelectAll();
+                }
+
+                else if (m < 0)
+                {
+                    MessageBox.Show("Wert kleiner 0 eingegeben!");
+                    tb_oben.Focus();
+                    tb_oben.SelectAll();
+                }
+
+                else if (m == 0) 
+                {
+                    MessageBox.Show("Wert darf nicht 0 betragen!");
+                    tb_oben.Focus();
+                    tb_oben.SelectAll();
+                }
+
+                else if (z < 0)
+                {
+                    MessageBox.Show("Wert darf nicht negativ sein!");
+                    tb_unten.Focus();
+                    tb_unten.SelectAll();
+                }
+
+                else if (z==0)
+                {
+                    MessageBox.Show("Wert muss größer als 0 sein!");
+                    tb_unten.Focus();
+                    tb_unten.SelectAll();
+                }
+
                 else
                 {
 
@@ -206,7 +245,7 @@ namespace Sprint2_experiment
                     tb_kopfspiel.Text = Convert.ToString(c);
                     tb_grundkreisdurchmesser.Text = Convert.ToString(db);
 
-                
+
                 }
             }
 
