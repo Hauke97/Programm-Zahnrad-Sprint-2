@@ -168,42 +168,42 @@ namespace Sprint2_experiment
                 if (checkm == false)
                 {
 
-                    MessageBox.Show("Achtung! Es wurde kein numerischer Wert eingegeben.");
+                    MessageBox.Show("Es dürfen nur numerische Werte für den Modul eingegeben werden." ,"Fehlermeldung",MessageBoxButton.OK, MessageBoxImage.Warning);
                     tb_oben.Focus();
                     tb_oben.SelectAll();
                 }
 
                 else if (checkz == false)
                 {
-                    MessageBox.Show("Achtung! Es wurde kein numerischer Wert eingegeben");
+                    MessageBox.Show("Es dürfen nur numerische Werte für die Zähnezahl eingegeben werden.", "Fehlermeldung", MessageBoxButton.OK, MessageBoxImage.Warning);
                     tb_unten.Focus();
                     tb_unten.SelectAll();
                 }
 
                 else if (m < 0)
                 {
-                    MessageBox.Show("Wert kleiner 0 eingegeben!");
+                    MessageBox.Show("Der Modul darf nicht negativ sein.", "Fehlermeldung", MessageBoxButton.OK, MessageBoxImage.Warning);
                     tb_oben.Focus();
                     tb_oben.SelectAll();
                 }
 
                 else if (m == 0) 
                 {
-                    MessageBox.Show("Wert darf nicht 0 betragen!");
+                    MessageBox.Show("Der Modul darf nicht 0 sein.", "Fehlermeldung", MessageBoxButton.OK, MessageBoxImage.Warning);
                     tb_oben.Focus();
                     tb_oben.SelectAll();
                 }
 
                 else if (z < 0)
                 {
-                    MessageBox.Show("Wert darf nicht negativ sein!");
+                    MessageBox.Show("Die Zähnezahl darf nicht negativ sein.", "Fehlermeldung", MessageBoxButton.OK, MessageBoxImage.Warning);
                     tb_unten.Focus();
                     tb_unten.SelectAll();
                 }
 
                 else if (z==0)
                 {
-                    MessageBox.Show("Wert muss größer als 0 sein!");
+                    MessageBox.Show("Die Zähnezahl darf nicht 0 sein.", "Fehlermeldung", MessageBoxButton.OK, MessageBoxImage.Warning);
                     tb_unten.Focus();
                     tb_unten.SelectAll();
                 }
@@ -254,86 +254,199 @@ namespace Sprint2_experiment
             {
 
                 //Zuweisung der Variablen über die Textboxen, je nachdem welches Item ausgewählt ist
-                double m;
-                double z = Convert.ToDouble(tb_oben.Text);
-                double d = Convert.ToDouble(tb_unten.Text);
-
-                //Berechnungen mittels Zähnezahl und Teilkreisdurchmesser
-                m = d / z;
-                double p = Math.PI / m;
-                double c = 0.167 * m;
-                double df = d - 2 * (m + c);
-                double da = d + 2 * m;
-                double h = 2 * m + c;
-                double hf = m + c;
-                double ha = m;
-                double a = 20;
-                double db = m * z * Math.Cos(a);
-
-                //Textboxen für die Ausgabe werden sichtbar geschaltet
-                tb_fußkreisdurchmesser.Visibility = Visibility.Visible;
-                tb_kopfkreisdurchmesser.Visibility = Visibility.Visible;
-                tb_kopfspiel.Visibility = Visibility.Visible;
-                tb_teilung.Visibility = Visibility.Visible;
-                tb_zahnfußhöhe.Visibility = Visibility.Visible;
-                tb_zahnhöhe.Visibility = Visibility.Visible;
-                tb_zahnkopfhöhe.Visibility = Visibility.Visible;
-                tb_grundkreisdurchmesser.Visibility = Visibility.Visible;
                 
 
-                //Rückgabe der berechneten Werte an die Textboxen
-                tb_fußkreisdurchmesser.Text = Convert.ToString(df);
-                tb_kopfkreisdurchmesser.Text = Convert.ToString(da);
-                tb_zahnhöhe.Text = Convert.ToString(h);
-                tb_zahnfußhöhe.Text = Convert.ToString(hf);
-                tb_zahnkopfhöhe.Text = Convert.ToString(ha);
-                tb_teilung.Text = Convert.ToString(p);
-                tb_kopfspiel.Text = Convert.ToString(c);
-                tb_grundkreisdurchmesser.Text = Convert.ToString(db);
+                string eingabez = tb_oben.Text;
+                string eingabed = tb_unten.Text;
+                double m;
+                double z;
+                double d;
 
+                bool checkz = Double.TryParse(eingabez, out z);
+                bool checkd = Double.TryParse(eingabed, out d);
+
+
+
+                if (checkz == false)
+                {
+
+                    MessageBox.Show("Es dürfen nur numerische Werte für die Zähnezahl eingegeben werden.", "Fehlermeldung", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    tb_oben.Focus();
+                    tb_oben.SelectAll();
+                }
+
+                else if (checkd == false)
+                {
+                    MessageBox.Show("Es dürfen nur numerische Werte für den Teilkreisdurchmesser eingegeben werden.", "Fehlermeldung", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    tb_unten.Focus();
+                    tb_unten.SelectAll();
+                }
+
+                else if (z < 0)
+                {
+                    MessageBox.Show("Die Zähnezahl darf nicht kleiner als 0 sein.", "Fehlermeldung", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    tb_oben.Focus();
+                    tb_oben.SelectAll();
+                }
+
+                else if (z == 0)
+                {
+                    MessageBox.Show("Die Zähnezahl darf nicht 0 sein.", "Fehlermeldung", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    tb_oben.Focus();
+                    tb_oben.SelectAll();
+                }
+
+                else if (d < 0)
+                {
+                    MessageBox.Show("Der Teilkreisdurchmesser darf nicht negativ sein.", "Fehlermeldung", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    tb_unten.Focus();
+                    tb_unten.SelectAll();
+                }
+
+                else if (d == 0)
+                {
+                    MessageBox.Show("Der Teilkreisdurchmesser darf nicht 0 sein.", "Fehlermeldung", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    tb_unten.Focus();
+                    tb_unten.SelectAll();
+                }
+
+                else
+                {
+
+                    //Berechnungen mittels Zähnezahl und Teilkreisdurchmesser
+                    m = d / z;
+                    double p = Math.PI / m;
+                    double c = 0.167 * m;
+                    double df = d - 2 * (m + c);
+                    double da = d + 2 * m;
+                    double h = 2 * m + c;
+                    double hf = m + c;
+                    double ha = m;
+                    double a = 20;
+                    double db = m * z * Math.Cos(a);
+
+                    //Textboxen für die Ausgabe werden sichtbar geschaltet
+                    tb_fußkreisdurchmesser.Visibility = Visibility.Visible;
+                    tb_kopfkreisdurchmesser.Visibility = Visibility.Visible;
+                    tb_kopfspiel.Visibility = Visibility.Visible;
+                    tb_teilung.Visibility = Visibility.Visible;
+                    tb_zahnfußhöhe.Visibility = Visibility.Visible;
+                    tb_zahnhöhe.Visibility = Visibility.Visible;
+                    tb_zahnkopfhöhe.Visibility = Visibility.Visible;
+                    tb_grundkreisdurchmesser.Visibility = Visibility.Visible;
+
+
+                    //Rückgabe der berechneten Werte an die Textboxen
+                    tb_fußkreisdurchmesser.Text = Convert.ToString(df);
+                    tb_kopfkreisdurchmesser.Text = Convert.ToString(da);
+                    tb_zahnhöhe.Text = Convert.ToString(h);
+                    tb_zahnfußhöhe.Text = Convert.ToString(hf);
+                    tb_zahnkopfhöhe.Text = Convert.ToString(ha);
+                    tb_teilung.Text = Convert.ToString(p);
+                    tb_kopfspiel.Text = Convert.ToString(c);
+                    tb_grundkreisdurchmesser.Text = Convert.ToString(db);
+
+                }
             }
 
             else if (trv_1.SelectedItem.Equals(itm_Teilkreis))
             {
 
                 //Zuweisung der Variablen über die Textboxen, je nachdem welches Item ausgewählt ist
-                double m = Convert.ToDouble(tb_oben.Text);
+
+
+                string eingabem = tb_oben.Text;
+                string eingabed = tb_unten.Text;
+                double m;
                 double z;
-                double d = Convert.ToDouble(tb_unten.Text);
+                double d;
 
-                //Berechnungen mittels Modul und Teilkreisdurchmesser
-                z = d / m;
-                double p = Math.PI / m;
-                double c = 0.167 * m;
-                double df = d - 2 * (m + c);
-                double da = d + 2 * m;
-                double h = 2 * m + c;
-                double hf = m + c;
-                double ha = m;
-                double a = 20;
-                double db = m * z * Math.Cos(a);
+                bool checkm = Double.TryParse(eingabem, out m);
+                bool checkd = Double.TryParse(eingabed, out d);
 
-                //Textboxen für die Ausgabe werden sichtbar geschaltet
-                tb_fußkreisdurchmesser.Visibility = Visibility.Visible;
-                tb_kopfkreisdurchmesser.Visibility = Visibility.Visible;
-                tb_kopfspiel.Visibility = Visibility.Visible;
-                tb_teilung.Visibility = Visibility.Visible;
-                tb_zahnfußhöhe.Visibility = Visibility.Visible;
-                tb_zahnhöhe.Visibility = Visibility.Visible;
-                tb_zahnkopfhöhe.Visibility = Visibility.Visible;
-                tb_grundkreisdurchmesser.Visibility = Visibility.Visible;
-                
 
-                //Rückgabe der berechneten Werte an die Textboxen 
-                tb_fußkreisdurchmesser.Text = Convert.ToString(df);
-                tb_kopfkreisdurchmesser.Text = Convert.ToString(da);
-                tb_zahnhöhe.Text = Convert.ToString(h);
-                tb_zahnfußhöhe.Text = Convert.ToString(hf);
-                tb_zahnkopfhöhe.Text = Convert.ToString(ha);
-                tb_teilung.Text = Convert.ToString(p);
-                tb_kopfspiel.Text = Convert.ToString(c);
-                tb_grundkreisdurchmesser.Text = Convert.ToString(db);
 
+                if (checkm == false)
+                {
+
+                    MessageBox.Show("Es dürfen nur numerische Werte für den Modul eingegeben werden.", "Fehlermeldung", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    tb_oben.Focus();
+                    tb_oben.SelectAll();
+                }
+
+                else if (checkd == false)
+                {
+                    MessageBox.Show("Es dürfen nur numerische Werte für den Teilkreisdurchmesser eingegeben werden.", "Fehlermeldung", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    tb_unten.Focus();
+                    tb_unten.SelectAll();
+                }
+
+                else if (m < 0)
+                {
+                    MessageBox.Show("Der Modul kann nicht negativ sein.", "Fehlermeldung", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    tb_oben.Focus();
+                    tb_oben.SelectAll();
+                }
+
+                else if (m == 0)
+                {
+                    MessageBox.Show("Der Modul darf nicht 0 sein.", "Fehlermeldung", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    tb_oben.Focus();
+                    tb_oben.SelectAll();
+                }
+
+                else if (d < 0)
+                {
+                    MessageBox.Show("Der Teilkreisdurchmesser darf nicht negativ sein.", "Fehlermeldung", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    tb_unten.Focus();
+                    tb_unten.SelectAll();
+                }
+
+                else if (d == 0)
+                {
+                    MessageBox.Show("Der Teilkreisdurchmesser darf nicht 0 sein.", "Fehlermeldung", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    tb_unten.Focus();
+                    tb_unten.SelectAll();
+                }
+
+
+
+                else
+                {
+
+                    //Berechnungen mittels Modul und Teilkreisdurchmesser
+                    z = d / m;
+                    double p = Math.PI / m;
+                    double c = 0.167 * m;
+                    double df = d - 2 * (m + c);
+                    double da = d + 2 * m;
+                    double h = 2 * m + c;
+                    double hf = m + c;
+                    double ha = m;
+                    double a = 20;
+                    double db = m * z * Math.Cos(a);
+
+                    //Textboxen für die Ausgabe werden sichtbar geschaltet
+                    tb_fußkreisdurchmesser.Visibility = Visibility.Visible;
+                    tb_kopfkreisdurchmesser.Visibility = Visibility.Visible;
+                    tb_kopfspiel.Visibility = Visibility.Visible;
+                    tb_teilung.Visibility = Visibility.Visible;
+                    tb_zahnfußhöhe.Visibility = Visibility.Visible;
+                    tb_zahnhöhe.Visibility = Visibility.Visible;
+                    tb_zahnkopfhöhe.Visibility = Visibility.Visible;
+                    tb_grundkreisdurchmesser.Visibility = Visibility.Visible;
+
+
+                    //Rückgabe der berechneten Werte an die Textboxen 
+                    tb_fußkreisdurchmesser.Text = Convert.ToString(df);
+                    tb_kopfkreisdurchmesser.Text = Convert.ToString(da);
+                    tb_zahnhöhe.Text = Convert.ToString(h);
+                    tb_zahnfußhöhe.Text = Convert.ToString(hf);
+                    tb_zahnkopfhöhe.Text = Convert.ToString(ha);
+                    tb_teilung.Text = Convert.ToString(p);
+                    tb_kopfspiel.Text = Convert.ToString(c);
+                    tb_grundkreisdurchmesser.Text = Convert.ToString(db);
+                }
 
             }
 
