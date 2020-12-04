@@ -140,7 +140,7 @@ namespace Sprint2_experiment
 
         //Event für den BeendenButton
         private void btn_beenden_Click(object sender, RoutedEventArgs e)
-        {
+        {  
             Environment.Exit(0);
         }
 
