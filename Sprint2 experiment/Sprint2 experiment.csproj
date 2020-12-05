@@ -52,6 +52,7 @@
     <Compile Include="UserControl1.xaml.cs">
       <DependentUpon>UserControl1.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Zahnradparameter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
