@@ -5,9 +5,9 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Sprint2_experiment"
              mc:Ignorable="d" Height="445.082" Width="801.23">
-    <Grid x:Name="grid" Background="#FF83A8D7">
+    <Grid x:Name="grid"  Background="#FF83A8D7"> 
         <!-- btn_berechnen ist beim Aufruf des Programms nicht freigeschaltet-->
-        <Button x:Name="btn_berechnen" Content="Berechnen" Margin="0,0,59,40" FontSize="24" Height="60" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="157" Click="btn_berechnen_Click" IsEnabled="False" Background="#FFFBF9F9"/>
+        <Button x:Name="btn_berechnen" Content="Berechnen" Margin="400,365,0,0" FontSize="24" HorizontalAlignment="Left" Width="157" Click="btn_berechnen_Click" IsEnabled="False" Background="#FFFBF9F9" Height="60" VerticalAlignment="Top"/>
         <!-- Textboxen und Labels sind nicht sichtbar-->
         <Label x:Name="lab_Zahnrad" Content="Zahnrad Zar GmbH &amp; Co. KG" HorizontalAlignment="Left" Height="106" Margin="277,149,0,0" VerticalAlignment="Top" Width="503" FontSize="36" FontWeight="Bold"/>
         <TextBox x:Name="tb_oben" HorizontalAlignment="Left" Height="45" Margin="374,49,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="70" FontSize="36" Visibility="Hidden"/>
@@ -30,7 +30,7 @@
         <Label x:Name="lab_zahnhöhe" Content="Zahnhöhe:" HorizontalAlignment="Left" Margin="474,202,0,0" VerticalAlignment="Top" Visibility="Hidden"/>
         <Label x:Name="lab_zahnfußhöhe" Content="Zahnfußhöhe:" HorizontalAlignment="Left" Margin="474,244,0,0" VerticalAlignment="Top" Visibility="Hidden"/>
         <Label x:Name="lab_zahnkopfhöhe" Content="Zahnkopfhöhe:" HorizontalAlignment="Left" Margin="474,290,0,0" VerticalAlignment="Top" Visibility="Hidden"/>
-        <Button x:Name="btn_beenden" Content="Beenden" HorizontalAlignment="Left" Margin="389,345,0,0" VerticalAlignment="Top" Width="135" Click="btn_beenden_Click" Height="60" FontSize="24" Background="White"/>
+        <Button x:Name="btn_beenden" Content="Beenden" HorizontalAlignment="Left" Margin="240,365,0,0" VerticalAlignment="Top" Width="135" Click="btn_beenden_Click" Height="60" FontSize="24" Background="White"/>
         <TreeView x:Name="trv_1" HorizontalAlignment="Left" Height="425" Margin="10,10,0,0" VerticalAlignment="Top" Width="223">
             <TreeViewItem x:Name="itm_Eingabe" Header="Eingabeparameter" FontSize="18" IsExpanded="False" >
                 <TreeViewItem x:Name="itm_Modul" Header="Modul, Zähnezahl" Selected="itm_Modul_Selected" FontSize="12"/>
@@ -38,7 +38,10 @@
                 <TreeViewItem x:Name="itm_Teilkreis" Header="Teilkreisdurchmesser, Modul" Selected="itm_Teilkreis_Selected" FontSize="12" Margin="0,0,-0.5,0" HorizontalAlignment="Left" Width="218" />
             </TreeViewItem>
         </TreeView>
-       
+        <Button x:Name="btn_Catia" Content="Catia" HorizontalAlignment="Left" Margin="582,365,0,0" VerticalAlignment="Top" Width="160" Height="60" FontSize="24" IsEnabled="False"/>
+        <TextBox x:Name="tb_Ausgabe" HorizontalAlignment="Left" Height="23" Margin="617,330,78,96" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120" Visibility="Hidden"/>
+        <Label x:Name="lab_Ausgabe"  HorizontalAlignment="Left" Margin="474,330,0,0" VerticalAlignment="Top"/>
+
 
     </Grid>
 </UserControl>
