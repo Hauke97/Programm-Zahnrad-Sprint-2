@@ -13,7 +13,7 @@ namespace Sprint2_experiment
         public double ha;
         public double a;
         public double db;
-
+        
 
         public Zahnradparameter()
 
