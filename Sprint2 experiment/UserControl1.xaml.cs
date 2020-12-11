@@ -36,6 +36,8 @@ namespace Sprint2_experiment
             lab_oben.Content = "Modul:";
             lab_unten.Content = "Zähnezahl:";
 
+            lab_Ausgabe.Content = "Teilkreisdurchmesser:";
+
             //Textboxen für die Eingabe und Labels werden sichtbar geschaltet
             Zeige_Ergebnislabels();
             lab_Zahnrad.Visibility = Visibility.Hidden;
@@ -51,7 +53,7 @@ namespace Sprint2_experiment
         {
             lab_oben.Content = "Zähnezahl:";
             lab_unten.Content = "Teilkreisdurchmesser:";
-
+            lab_Ausgabe.Content = "Modul:";
             //Textboxen für die Eingabe und Labels werden sichtbar geschaltet
             Zeige_Ergebnislabels();
 
@@ -68,6 +70,7 @@ namespace Sprint2_experiment
         {
             lab_oben.Content = "Modul:";
             lab_unten.Content = "Teilkreisdurchmesser:";
+            lab_Ausgabe.Content = "Zähnezahl:";
 
             //Textboxen für die Eingabe und Labels werden sichtbar geschaltet
             Zeige_Ergebnislabels();
@@ -93,6 +96,7 @@ namespace Sprint2_experiment
             lab_zahnhöhe.Visibility = Visibility.Visible;
             lab_zahnkopfhöhe.Visibility = Visibility.Visible;
             lab_grundkreisdurchmesser.Visibility = Visibility.Visible;
+            lab_Ausgabe.Visibility = Visibility.Visible;
         }
 
         private void Loesche_Textboxen()
@@ -107,6 +111,7 @@ namespace Sprint2_experiment
             tb_zahnhöhe.Clear();
             tb_zahnkopfhöhe.Clear();
             tb_grundkreisdurchmesser.Clear();
+            tb_Ausgabe.Clear();
         }
             
         //Event für den BeendenButton
@@ -117,9 +122,9 @@ namespace Sprint2_experiment
 
         //Event für den Berechungsbutton
         private void btn_berechnen_Click(object sender, RoutedEventArgs e)
-        {         
+        {
             //if-Schleife:Variablenzuweisung ist abhängig von der Auswahl eines TreeViewItems
-
+            double aus;
             if (trv_1.SelectedItem.Equals(itm_Modul))
             {
 
@@ -179,7 +184,8 @@ namespace Sprint2_experiment
                 {
                     //Berechnungen mittels Modul und Zähnezahl
                     d = m * z;
-                    zahnradparameter.Berechne_Parameter(m, z, d);                                       
+                    zahnradparameter.Berechne_Parameter(m, z, d);
+                    tb_Ausgabe.Text = Convert.ToString(d);
                 }
             }
 
@@ -233,7 +239,7 @@ namespace Sprint2_experiment
                     //Berechnungen mittels Zähnezahl und Teilkreisdurchmesser
                     m = d / z;
                     zahnradparameter.Berechne_Parameter(m, z, d);
-                                      
+                    tb_Ausgabe.Text = Convert.ToString(m);
                 }
             }
 
@@ -285,7 +291,9 @@ namespace Sprint2_experiment
                 {
                     //Berechnungen mittels Modul und Teilkreisdurchmesser
                     z = d / m;
-                    zahnradparameter.Berechne_Parameter(m, z, d);                                                      
+                    zahnradparameter.Berechne_Parameter(m, z, d);
+
+                    tb_Ausgabe.Text = Convert.ToString(z);
                 }
                                
             }
@@ -298,6 +306,7 @@ namespace Sprint2_experiment
             tb_zahnhöhe.Visibility = Visibility.Visible;
             tb_zahnkopfhöhe.Visibility = Visibility.Visible;
             tb_grundkreisdurchmesser.Visibility = Visibility.Visible;
+            tb_Ausgabe.Visibility = Visibility.Visible;
 
             //Rückgabbe der berechneten Werte an die Textboxen
             tb_fußkreisdurchmesser.Text = Convert.ToString(zahnradparameter.df);
