@@ -30,8 +30,8 @@ namespace Sprint2_experiment
         }
         public void Berechne_Schnittpunkt1 (double m, double z, double d)
         {
-            // Parameter Hilfskreis
-            R1 = 0.5 * 0.94 * d;
+            // Parameter Kopfkreis
+            R1 = d/ 2 + m;
             X1 = 0;
             Y2 = 0;
 
@@ -40,16 +40,72 @@ namespace Sprint2_experiment
             Y2 = 0.94 * d * Math.Sin(Math.PI * 70 / 180);
             R1 = Math.Sqrt(Math.Pow(d * Math.Sin(90 / z) - 0.94 * d * Math.Sin(Math.PI * 20 /180), 2) + Math.Pow(d * Math.Cos(90 / z) - 0.94 * d * Math.Cos(Math.PI * 20 / 180), 2));
 
-            
+            dis = Math.Sqrt(Math.Pow(X1 - X2, 2) + Math.Pow(Y1-Y2, 2));
+            L = Math.Pow(R1, 2) + Math.Pow(R2, 2) + Math.Pow(dis, 2) / (2 * d);
+            h = Math.Sqrt(Math.Pow(R1, 2) - Math.Pow(L, 2));
 
+
+            // kartesische Koordinaten des Schnittpunkts
+            x = L * (X2 - X1) / d + h * (Y2 - Y1) / d + X1;
+            y = L * (Y2 - Y1) / d + h * (X2 - X1) / d + Y1;
 
         }
 
 
+        public void Berechne_Schnittpunkt2 (double m, double z, double d)
+        {
+            //Parameter großer Kreis
+            X1 = 0.94 * d * Math.Cos(Math.PI * 20 / 180);
+            Y1 = 0.94 * d * Math.Sin(Math.PI * 70 / 180);
+            R1 = Math.Sqrt(Math.Pow(d * Math.Sin(90 / z) - 0.94 * d * Math.Sin(Math.PI * 20 / 180), 2) + Math.Pow(d * Math.Cos(90 / z) - 0.94 * d * Math.Cos(Math.PI * 20 / 180), 2));
+
+            // Parameter Verrundungskreis
+            R2 = 0.35 * m;
+            X2 = ((d / 2 - 1.25 * m) + 0.35 * m) * Math.Sin(Math.PI * 10 / 180);
+            Y2 = ((d / 2 - 1.25 * m) + 0.35 * m) * Math.Cos(Math.PI * 10 / 180);
 
 
 
 
+            dis = Math.Sqrt(Math.Pow(X1 - X2, 2) + Math.Pow(Y1 - Y2, 2));
+            L = Math.Pow(R1, 2) + Math.Pow(R2, 2) + Math.Pow(dis, 2) / (2 * d);
+            h = Math.Sqrt(Math.Pow(R1, 2) - Math.Pow(L, 2));
+
+
+            // kartesische Koordinaten des Schnittpunkts
+            x = L * (X2 - X1) / d + h * (Y2 - Y1) / d + X1;
+            y = L * (Y2 - Y1) / d + h * (X2 - X1) / d + Y1;
+
+
+
+
+
+
+        }
+
+        public void Berechne_Schnittpunkt3 (double m, double z, double d)
+        {
+            //Parameter Fußkreis
+            R1 = d / 2 - 1.25 * m;
+            X1 = 0;
+            Y1 = 0;
+
+            //Parameter Verrundungskreis
+            R2 = 0.35 * m;
+            X2 = ((d / 2 - 1.25 * m) + 0.35 * m) * Math.Sin(Math.PI * 10 / 180);
+            Y2 = ((d / 2 - 1.25 * m) + 0.35 * m) * Math.Cos(Math.PI * 10 / 180);
+
+
+            dis = Math.Sqrt(Math.Pow(X1 - X2, 2) + Math.Pow(Y1 - Y2, 2));
+            L = Math.Pow(R1, 2) + Math.Pow(R2, 2) + Math.Pow(dis, 2) / (2 * d);
+            h = Math.Sqrt(Math.Pow(R1, 2) - Math.Pow(L, 2));
+
+
+            // kartesische Koordinaten des Schnittpunkts
+            x = L * (X2 - X1) / d + h * (Y2 - Y1) / d + X1;
+            y = L * (Y2 - Y1) / d + h * (X2 - X1) / d + Y1;
+
+        }
 
 
 
