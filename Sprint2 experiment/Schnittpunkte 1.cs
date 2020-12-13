@@ -111,15 +111,12 @@ namespace Sprint2_experiment
             dis = Math.Sqrt(Math.Pow(X1 - X2, 2) + Math.Pow(Y1 - Y2, 2));
             L = Math.Pow(R1, 2) + Math.Pow(R2, 2) + Math.Pow(dis, 2) / (2 * d);
             h = Math.Sqrt(Math.Pow(R1, 2) - Math.Pow(L, 2));
-
-
             // kartesische Koordinaten des Schnittpunkts
             x5 = L * (X2 - X1) / d + h * (Y2 - Y1) / d + X1;
             y5 = L * (Y2 - Y1) / d + h * (X2 - X1) / d + Y1;
 
             x6 = L * (X2 - X1) / d - h * (Y2 - Y1) / d + X1;
             y6 = L * (Y2 - Y1) / d - h * (X2 - X1) / d + Y1;
-
         }
 
 
