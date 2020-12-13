@@ -124,7 +124,7 @@ namespace Sprint2_experiment
         private void btn_berechnen_Click(object sender, RoutedEventArgs e)
         {
             //if-Schleife:Variablenzuweisung ist abhängig von der Auswahl eines TreeViewItems
-            double aus;
+            
             if (trv_1.SelectedItem.Equals(itm_Modul))
             {
 
