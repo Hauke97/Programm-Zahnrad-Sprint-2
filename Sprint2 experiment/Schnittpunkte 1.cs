@@ -9,8 +9,18 @@ namespace Sprint2_experiment
 {
     class Schnittpunkte
     {
-        double x;
-        double y;
+        double x1;
+        double y1;
+        double x2;
+        double y2;
+        double x3;
+        double y3;
+        double x4;
+        double y4;
+        double x5;
+        double y5;
+        double x6;
+        double y6;
         double dis;
         double L;
         double h;
@@ -20,9 +30,7 @@ namespace Sprint2_experiment
         double X2;
         double Y2;
         double R2;
-        double d;
-        double m;
-        double z;
+        
         
 
         public Schnittpunkte ()
@@ -46,9 +54,11 @@ namespace Sprint2_experiment
 
 
             // kartesische Koordinaten des Schnittpunkts
-            x = L * (X2 - X1) / d + h * (Y2 - Y1) / d + X1;
-            y = L * (Y2 - Y1) / d + h * (X2 - X1) / d + Y1;
+            x1 = L * (X2 - X1) / d + h * (Y2 - Y1) / d + X1;
+            y1 = L * (Y2 - Y1) / d + h * (X2 - X1) / d + Y1;
 
+            x2 = L * (X2 - X1) / d - h * (Y2 - Y1) / d + X1;
+            y2 = L * (Y2 - Y1) / d - h * (X2 - X1) / d + Y1;
         }
 
 
@@ -73,9 +83,11 @@ namespace Sprint2_experiment
 
 
             // kartesische Koordinaten des Schnittpunkts
-            x = L * (X2 - X1) / d + h * (Y2 - Y1) / d + X1;
-            y = L * (Y2 - Y1) / d + h * (X2 - X1) / d + Y1;
+            x3 = L * (X2 - X1) / d + h * (Y2 - Y1) / d + X1;
+            y3 = L * (Y2 - Y1) / d + h * (X2 - X1) / d + Y1;
 
+            x4 = L * (X2 - X1) / d - h * (Y2 - Y1) / d + X1;
+            y4 = L * (Y2 - Y1) / d - h * (X2 - X1) / d + Y1;
 
 
 
@@ -102,8 +114,11 @@ namespace Sprint2_experiment
 
 
             // kartesische Koordinaten des Schnittpunkts
-            x = L * (X2 - X1) / d + h * (Y2 - Y1) / d + X1;
-            y = L * (Y2 - Y1) / d + h * (X2 - X1) / d + Y1;
+            x5 = L * (X2 - X1) / d + h * (Y2 - Y1) / d + X1;
+            y5 = L * (Y2 - Y1) / d + h * (X2 - X1) / d + Y1;
+
+            x6 = L * (X2 - X1) / d - h * (Y2 - Y1) / d + X1;
+            y6 = L * (Y2 - Y1) / d - h * (X2 - X1) / d + Y1;
 
         }
 
