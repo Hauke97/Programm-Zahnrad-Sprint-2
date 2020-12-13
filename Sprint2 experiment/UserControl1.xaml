@@ -11,7 +11,7 @@
         <!-- Textboxen und Labels sind nicht sichtbar-->
         <Label x:Name="lab_Zahnrad" Content="Zahnrad Zar GmbH &amp; Co. KG" HorizontalAlignment="Left" Height="106" Margin="277,149,0,0" VerticalAlignment="Top" Width="503" FontSize="36" FontWeight="Bold"/>
         <TextBox x:Name="tb_oben" HorizontalAlignment="Left" Height="45" Margin="374,49,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="70" FontSize="36" Visibility="Hidden"/>
-        <TextBox x:Name="tb_unten" HorizontalAlignment="Left" Height="45" Margin="374,168,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="70" FontSize="36" Visibility="Hidden"/>
+        <TextBox x:Name="tb_unten" HorizontalAlignment="Left" Height="45" Margin="374,169,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="70" FontSize="36" Visibility="Hidden"/>
         <Label x:Name="lab_oben"  HorizontalAlignment="Left" Margin="233,61,0,0" VerticalAlignment="Top" Width="95" RenderTransformOrigin="1.313,0.627" Height="33"/>
         <Label x:Name="lab_unten"  HorizontalAlignment="Left" Margin="233,178,0,0" VerticalAlignment="Top" Width="136" Height="35"/>
         <TextBox x:Name="tb_teilung" HorizontalAlignment="Left" Margin="617,49,0,376" TextWrapping="Wrap" Width="106" Visibility="Hidden"/>
@@ -38,9 +38,11 @@
                 <TreeViewItem x:Name="itm_Teilkreis" Header="Teilkreisdurchmesser, Modul" Selected="itm_Teilkreis_Selected" FontSize="12" Margin="0,0,-0.5,0" HorizontalAlignment="Left" Width="218" />
             </TreeViewItem>
         </TreeView>
-        <Button x:Name="btn_Catia" Content="Catia" HorizontalAlignment="Left" Margin="582,365,0,0" VerticalAlignment="Top" Width="160" Height="60" FontSize="24" IsEnabled="False"/>
+        <Button x:Name="btn_Catia" Content="Catia" HorizontalAlignment="Left" Margin="582,365,0,0" VerticalAlignment="Top" Width="160" Height="60" FontSize="24" IsEnabled="False" Background="Snow"/>
         <TextBox x:Name="tb_Ausgabe" HorizontalAlignment="Left" Height="23" Margin="617,330,78,96" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120" Visibility="Hidden"/>
         <Label x:Name="lab_Ausgabe"  HorizontalAlignment="Left" Margin="474,330,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="tb_breite" HorizontalAlignment="Left" Height="45" Margin="374,289,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="70" Visibility="Hidden"/>
+        <Label x:Name="lab_breite"  Content="Breite:" HorizontalAlignment="Left" Margin="233,298,0,0" VerticalAlignment="Top" Visibility="Hidden"/>
 
 
     </Grid>
