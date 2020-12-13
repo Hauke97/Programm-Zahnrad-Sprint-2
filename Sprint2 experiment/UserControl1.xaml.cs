@@ -64,6 +64,7 @@ namespace Sprint2_experiment
 
             //Berechnungsbutton wird freigeschaltet
             btn_berechnen.IsEnabled = true;
+            btn_Catia.IsEnabled = true;
         }
 
         private void itm_Teilkreis_Selected(object sender, RoutedEventArgs e)
@@ -82,12 +83,14 @@ namespace Sprint2_experiment
             
             //Berechnungsbutton wird freigeschaltet
             btn_berechnen.IsEnabled = true;
+            btn_Catia.IsEnabled = true;
         }
 
         private void Zeige_Ergebnislabels()
         {
             tb_oben.Visibility = Visibility.Visible;
             tb_unten.Visibility = Visibility.Visible;
+            tb_breite.Visibility = Visibility.Visible;
             lab_fußkreisdurchmesser.Visibility = Visibility.Visible;
             lab_kopfkreisdurchmesser.Visibility = Visibility.Visible;
             lab_kopfspiel.Visibility = Visibility.Visible;
@@ -97,6 +100,7 @@ namespace Sprint2_experiment
             lab_zahnkopfhöhe.Visibility = Visibility.Visible;
             lab_grundkreisdurchmesser.Visibility = Visibility.Visible;
             lab_Ausgabe.Visibility = Visibility.Visible;
+            lab_breite.Visibility = Visibility.Visible;
         }
 
         private void Loesche_Textboxen()
@@ -112,6 +116,7 @@ namespace Sprint2_experiment
             tb_zahnkopfhöhe.Clear();
             tb_grundkreisdurchmesser.Clear();
             tb_Ausgabe.Clear();
+            tb_breite.Clear();
         }
             
         //Event für den BeendenButton
