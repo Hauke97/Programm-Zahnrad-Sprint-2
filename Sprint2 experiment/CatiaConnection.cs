@@ -84,12 +84,11 @@ namespace Sprint2_experiment
             // Skizze umbenennen
             hsp_catiaProfil.set_Name("Zahn");
 
-            // Rechteck in Skizze einzeichnen
             // Skizze oeffnen
             Factory2D catFactory2D1 = hsp_catiaProfil.OpenEdition();
-
+            
             // Zahn erzeugen
-            Point2D catPoint2D1 = catFactory2D1.CreatePoint(-18.214, 199.196);
+            Point2D catPoint2D1 = catFactory2D1.CreatePoint(x1, x2);
             Point2D catPoint2D2 = catFactory2D1.CreatePoint(-18.214, 264.863);
             Point2D catPoint2D3 = catFactory2D1.CreatePoint(18.214, 264.863);
             Point2D catPoint2D4 = catFactory2D1.CreatePoint(18.214, 199.169);
@@ -110,6 +109,7 @@ namespace Sprint2_experiment
 
             Circle2D catCircle2D1 = catFactory2D1.CreateCircle(0, 0, 200, 1.347830515, 1.479602873);
 
+            //Zahn mit Kreismuster vervielfältigen
             ShapeFactory SF = (ShapeFactory)hsp_catiaPart.Part.ShapeFactory;
             HybridShapeFactory HSF = (HybridShapeFactory)hsp_catiaPart.Part.HybridShapeFactory;
             Part myPart = hsp_catiaPart.Part;
@@ -155,7 +155,7 @@ namespace Sprint2_experiment
             // Hauptkoerper in Bearbeitung definieren
             hsp_catiaPart.Part.InWorkObject = hsp_catiaPart.Part.MainBody;
 
-            // Block(Balken) erzeugen
+            // Block erzeugen
             ShapeFactory catShapeFactory1 = (ShapeFactory)hsp_catiaPart.Part.ShapeFactory;
             Pad catPad1 = catShapeFactory1.AddNewPad(hsp_catiaProfil, b);
 
