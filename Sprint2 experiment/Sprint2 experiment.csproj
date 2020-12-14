@@ -33,6 +33,30 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Interop.HybridShapeTypeLib%281%29">
+      <HintPath>..\..\..\..\Downloads\Interop.HybridShapeTypeLib(1).dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Interop.INFITF">
+      <HintPath>..\..\..\..\Downloads\Interop.INFITF.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Interop.KnowledgewareTypeLib%281%29">
+      <HintPath>..\..\..\..\Downloads\Interop.KnowledgewareTypeLib(1).dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Interop.MECMOD%281%29">
+      <HintPath>..\..\..\..\Downloads\Interop.MECMOD(1).dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Interop.PARTITF%281%29">
+      <HintPath>..\..\..\..\Downloads\Interop.PARTITF(1).dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Interop.ProductStructureTypeLib%281%29">
+      <HintPath>..\..\..\..\Downloads\Interop.ProductStructureTypeLib(1).dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
@@ -47,6 +71,7 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CatiaConnection.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Schnittpunkte 1.cs" />
