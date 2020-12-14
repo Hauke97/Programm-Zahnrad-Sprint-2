@@ -38,7 +38,7 @@
                 <TreeViewItem x:Name="itm_Teilkreis" Header="Teilkreisdurchmesser, Modul" Selected="itm_Teilkreis_Selected" FontSize="12" Margin="0,0,-0.5,0" HorizontalAlignment="Left" Width="218" />
             </TreeViewItem>
         </TreeView>
-        <Button x:Name="btn_Catia" Content="Catia" HorizontalAlignment="Left" Margin="582,365,0,0" VerticalAlignment="Top" Width="160" Height="60" FontSize="24" IsEnabled="False" Background="Snow"/>
+        <Button x:Name="btn_Catia" Content="Catia" HorizontalAlignment="Left" Margin="582,365,0,0" VerticalAlignment="Top" Width="160" Height="60" FontSize="24" IsEnabled="False" Background="Snow" Click="btn_Catia_Click"/>
         <TextBox x:Name="tb_Ausgabe" HorizontalAlignment="Left" Height="23" Margin="617,330,78,96" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120" Visibility="Hidden"/>
         <Label x:Name="lab_Ausgabe"  HorizontalAlignment="Left" Margin="474,330,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="tb_breite" HorizontalAlignment="Left" Height="45" Margin="374,289,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="70" Visibility="Hidden"/>
