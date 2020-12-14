@@ -27,8 +27,8 @@ namespace Sprint2_experiment
         public UserControl1()
         {
             InitializeComponent();
-        }      
-                  
+        }
+
         //Bei Auswahl eines TreeViewItems ändern sich die Inhalte der Labels
         private void itm_Modul_Selected(object sender, RoutedEventArgs e)
         {
@@ -80,7 +80,7 @@ namespace Sprint2_experiment
 
             //Bei Auswahl eines neuen Items werden die Inhalte der Textboxen gelöscht
             Loesche_Textboxen();
-            
+
             //Berechnungsbutton wird freigeschaltet
             btn_berechnen.IsEnabled = true;
             btn_Catia.IsEnabled = true;
@@ -118,10 +118,10 @@ namespace Sprint2_experiment
             tb_Ausgabe.Clear();
             tb_breite.Clear();
         }
-            
+
         //Event für den BeendenButton
         private void btn_beenden_Click(object sender, RoutedEventArgs e)
-        {  
+        {
             Environment.Exit(0);
         }
 
@@ -129,7 +129,7 @@ namespace Sprint2_experiment
         private void btn_berechnen_Click(object sender, RoutedEventArgs e)
         {
             //if-Schleife:Variablenzuweisung ist abhängig von der Auswahl eines TreeViewItems
-            
+
             if (trv_1.SelectedItem.Equals(itm_Modul))
             {
 
@@ -145,7 +145,7 @@ namespace Sprint2_experiment
 
                 if (checkm == false)
                 {
-                    MessageBox.Show("Es dürfen nur numerische Werte für den Modul eingegeben werden." ,"Fehlermeldung",MessageBoxButton.OK, MessageBoxImage.Warning);
+                    MessageBox.Show("Es dürfen nur numerische Werte für den Modul eingegeben werden.", "Fehlermeldung", MessageBoxButton.OK, MessageBoxImage.Warning);
                     tb_oben.Focus();
                     tb_oben.SelectAll();
                 }
@@ -164,7 +164,7 @@ namespace Sprint2_experiment
                     tb_oben.SelectAll();
                 }
 
-                else if (m == 0) 
+                else if (m == 0)
                 {
                     MessageBox.Show("Der Modul darf nicht 0 sein.", "Fehlermeldung", MessageBoxButton.OK, MessageBoxImage.Warning);
                     tb_oben.Focus();
@@ -178,7 +178,7 @@ namespace Sprint2_experiment
                     tb_unten.SelectAll();
                 }
 
-                else if (z==0)
+                else if (z == 0)
                 {
                     MessageBox.Show("Die Zähnezahl darf nicht 0 sein.", "Fehlermeldung", MessageBoxButton.OK, MessageBoxImage.Warning);
                     tb_unten.Focus();
@@ -264,7 +264,7 @@ namespace Sprint2_experiment
 
                 if (checkm == false)
                 {
-                    Zeige_Fehler("Es dürfen nur numerische Werte für den Modul eingegeben werden."); 
+                    Zeige_Fehler("Es dürfen nur numerische Werte für den Modul eingegeben werden.");
                 }
 
                 else if (checkd == false)
@@ -300,7 +300,7 @@ namespace Sprint2_experiment
 
                     tb_Ausgabe.Text = Convert.ToString(z);
                 }
-                               
+
             }
             //Textboxen für die Ausgabe werden sichtbar geschaltet
             tb_fußkreisdurchmesser.Visibility = Visibility.Visible;
@@ -325,10 +325,64 @@ namespace Sprint2_experiment
         }
         private void Zeige_Fehler(string Fehlermeldung)
         {
-            MessageBox.Show(Fehlermeldung , "Fehlermeldung", MessageBoxButton.OK, MessageBoxImage.Warning);
+            MessageBox.Show(Fehlermeldung, "Fehlermeldung", MessageBoxButton.OK, MessageBoxImage.Warning);
             tb_oben.Focus();
             tb_oben.SelectAll();
         }
 
+        public void btn_Catia_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+
+                CatiaConnection cc = new CatiaConnection();
+
+                // Finde Catia Prozess
+                if (cc.CATIALaeuft())
+                {
+                    Console.WriteLine("0");
+
+                    // Öffne ein neues Part
+                    cc.ErzeugePart();
+                    Console.WriteLine("1");
+
+                    // Erstelle eine Skizze
+                    cc.ErstelleLeereSkizze();
+                    Console.WriteLine("2");
+
+                    // Generiere ein Profil
+                    cc.ErzeugeProfil();
+                    Console.WriteLine("3");
+
+
+                    // Extrudiere Zahnrad
+                    cc.ErzeugeZahnrad(5);
+                    Console.WriteLine("ZR 4");
+
+                }
+                else
+                {
+                    Console.WriteLine("Laufende Catia Application nicht gefunden");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Exception aufgetreten");
+            }
+            Console.WriteLine("Fertig - Taste drücken.");
+            Console.ReadKey();
+
+        }
     }
+            class CatiaControl
+            {
+                CatiaControl()
+                {
+                   
+
+               
+                }
+        
+            }
+    
 }
