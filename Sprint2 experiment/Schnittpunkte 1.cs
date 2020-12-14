@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Sprint2_experiment
 {
-    class Schnittpunkte
+    public class Schnittpunkte
     {
         double x1;
         double y1;
@@ -41,12 +41,12 @@ namespace Sprint2_experiment
             // Parameter Kopfkreis
             R1 = d/ 2 + m;
             X1 = 0;
-            Y2 = 0;
+            Y1 = 0;
 
             // Parameter großer Kreis
             X2 = 0.94 * d * Math.Cos(Math.PI * 20 / 180);
             Y2 = 0.94 * d * Math.Sin(Math.PI * 70 / 180);
-            R1 = Math.Sqrt(Math.Pow(d * Math.Sin(90 / z) - 0.94 * d * Math.Sin(Math.PI * 20 /180), 2) + Math.Pow(d * Math.Cos(90 / z) - 0.94 * d * Math.Cos(Math.PI * 20 / 180), 2));
+            R2 = Math.Sqrt(Math.Pow(d * Math.Sin(90 / z) - 0.94 * d * Math.Sin(Math.PI * 20 /180), 2) + Math.Pow(d * Math.Cos(90 / z) - 0.94 * d * Math.Cos(Math.PI * 20 / 180), 2));
 
             dis = Math.Sqrt(Math.Pow(X1 - X2, 2) + Math.Pow(Y1-Y2, 2));
             L = Math.Pow(R1, 2) + Math.Pow(R2, 2) + Math.Pow(dis, 2) / (2 * d);
