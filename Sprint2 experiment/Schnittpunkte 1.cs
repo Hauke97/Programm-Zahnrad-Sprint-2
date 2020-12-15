@@ -21,15 +21,15 @@ namespace Sprint2_experiment
         public double y5;
         public double x6;
         public double y6;
-        double dis;
-        double L;
-        double h;
-        double X1;
-        double Y1;
-        double R1;
-        double X2;
-        double Y2;
-        double R2;
+        public double dis;
+        public double L;
+        public double h;
+        public double X1;
+        public double Y1;
+        public double R1;
+        public double X2;
+        public double Y2;
+        public double R2;
         
         
 
