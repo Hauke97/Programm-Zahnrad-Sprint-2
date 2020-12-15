@@ -28,6 +28,9 @@ namespace Sprint2_experiment
         {
             InitializeComponent();
         }
+        double m;
+        double d;
+        double z;
 
         //Bei Auswahl eines TreeViewItems ändern sich die Inhalte der Labels
         private void itm_Modul_Selected(object sender, RoutedEventArgs e)
@@ -47,6 +50,7 @@ namespace Sprint2_experiment
 
             //Berechnungsbutton wird freigeschaltet
             btn_berechnen.IsEnabled = true;
+            btn_Catia.IsEnabled = true;
         }
 
         private void itm_Zahn_Selected(object sender, RoutedEventArgs e)
@@ -248,6 +252,7 @@ namespace Sprint2_experiment
                 }
             }
 
+            
             else if (trv_1.SelectedItem.Equals(itm_Teilkreis))
             {
 
@@ -351,7 +356,7 @@ namespace Sprint2_experiment
                     Console.WriteLine("2");
 
                     // Generiere ein Profil
-                    cc.ErzeugeProfil();
+                    cc.ErzeugeProfil(m,z,d);
                     Console.WriteLine("3");
 
 

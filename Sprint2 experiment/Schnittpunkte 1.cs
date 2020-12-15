@@ -9,18 +9,18 @@ namespace Sprint2_experiment
 {
     public class Schnittpunkte
     {
-        double x1;
-        double y1;
-        double x2;
-        double y2;
-        double x3;
-        double y3;
-        double x4;
-        double y4;
-        double x5;
-        double y5;
-        double x6;
-        double y6;
+        public double x1;
+        public double y1;
+        public double x2;
+        public double y2;
+        public double x3;
+        public double y3;
+        public double x4;
+        public double y4;
+        public double x5;
+        public double y5;
+        public double x6;
+        public double y6;
         double dis;
         double L;
         double h;
@@ -36,7 +36,7 @@ namespace Sprint2_experiment
         public Schnittpunkte ()
         {
         }
-        public void Berechne_Schnittpunkt1 (double m, double z, double d)
+        public void Berechne_Schnittpunkte1 (double m, double z, double d)
         {
             // Parameter Kopfkreis
             R1 = d/ 2 + m;
@@ -48,7 +48,7 @@ namespace Sprint2_experiment
             Y2 = 0.94 * d * Math.Sin(Math.PI * 70 / 180);
             R2 = Math.Sqrt(Math.Pow(d * Math.Sin(90 / z) - 0.94 * d * Math.Sin(Math.PI * 20 /180), 2) + Math.Pow(d * Math.Cos(90 / z) - 0.94 * d * Math.Cos(Math.PI * 20 / 180), 2));
 
-            dis = Math.Sqrt(Math.Pow(X1 - X2, 2) + Math.Pow(Y1-Y2, 2));
+            dis = Math.Sqrt(Math.Pow(X1 - X2, 2) + Math.Pow(Y1 - Y2, 2));
             L = Math.Pow(R1, 2) + Math.Pow(R2, 2) + Math.Pow(dis, 2) / (2 * d);
             h = Math.Sqrt(Math.Pow(R1, 2) - Math.Pow(L, 2));
 
@@ -88,11 +88,6 @@ namespace Sprint2_experiment
 
             x4 = L * (X2 - X1) / d - h * (Y2 - Y1) / d + X1;
             y4 = L * (Y2 - Y1) / d - h * (X2 - X1) / d + Y1;
-
-
-
-
-
         }
 
         public void Berechne_Schnittpunkt3 (double m, double z, double d)
