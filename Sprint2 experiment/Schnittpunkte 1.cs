@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
+
 
 
 namespace Sprint2_experiment
@@ -49,16 +51,29 @@ namespace Sprint2_experiment
             R2 = Math.Sqrt(Math.Pow(d * Math.Sin(90 / z) - 0.94 * d * Math.Sin(Math.PI * 20 /180), 2) + Math.Pow(d * Math.Cos(90 / z) - 0.94 * d * Math.Cos(Math.PI * 20 / 180), 2));
 
             dis = Math.Sqrt(Math.Pow(X1 - X2, 2) + Math.Pow(Y1 - Y2, 2));
-            L = Math.Pow(R1, 2) + Math.Pow(R2, 2) + Math.Pow(dis, 2) / (2 * d);
-            h = Math.Sqrt(Math.Pow(R1, 2) - Math.Pow(L, 2));
+            L = (Math.Pow(R1, 2) - Math.Pow(R2, 2) + Math.Pow(dis, 2)) / (2 * d);
+
+            if (Math.Pow(R1, 2) - Math.Pow(L, 2) < 0.00001)
+            {
+                h = 0;
+                MessageBox.Show("Das Argument der Wurzel darf nicht 0 sein.", "Fehlermeldung", MessageBoxButton.OK, MessageBoxImage.Warning);
+
+            }
+            else 
+            {
+                h = Math.Sqrt(Math.Pow(R1, 2) - Math.Pow(L, 2));
 
 
-            // kartesische Koordinaten des Schnittpunkts
-            x1 = L * (X2 - X1) / d + h * (Y2 - Y1) / d + X1;
-            y1 = L * (Y2 - Y1) / d + h * (X2 - X1) / d + Y1;
+                // kartesische Koordinaten des Schnittpunkts
+                x1 = L * (X2 - X1) / d + h * (Y2 - Y1) / d + X1;
+                y1 = L * (Y2 - Y1) / d + h * (X2 - X1) / d + Y1;
 
-            x2 = L * (X2 - X1) / d - h * (Y2 - Y1) / d + X1;
-            y2 = L * (Y2 - Y1) / d - h * (X2 - X1) / d + Y1;
+                x2 = L * (X2 - X1) / d - h * (Y2 - Y1) / d + X1;
+                y2 = L * (Y2 - Y1) / d - h * (X2 - X1) / d + Y1;
+
+
+            }
+            
         }
 
 
@@ -78,18 +93,24 @@ namespace Sprint2_experiment
 
 
             dis = Math.Sqrt(Math.Pow(X1 - X2, 2) + Math.Pow(Y1 - Y2, 2));
-            L = Math.Pow(R1, 2) + Math.Pow(R2, 2) + Math.Pow(dis, 2) / (2 * d);
-            h = Math.Sqrt(Math.Pow(R1, 2) - Math.Pow(L, 2));
+            L = (Math.Pow(R1, 2) - Math.Pow(R2, 2) + Math.Pow(dis, 2)) / (2 * d);
 
+            if (Math.Pow(R1, 2) - Math.Pow(L, 2) < 0.00001)
+            {
+                h = 0;
+                MessageBox.Show("Das Argument der Wurzel darf nicht 0 sein.", "Fehlermeldung", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
+            else
+            {
+                h = Math.Sqrt(Math.Pow(R1, 2) - Math.Pow(L, 2));
+                // kartesische Koordinaten des Schnittpunkts
+                x3 = L * (X2 - X1) / d + h * (Y2 - Y1) / d + X1;
+                y3 = L * (Y2 - Y1) / d + h * (X2 - X1) / d + Y1;
 
-            // kartesische Koordinaten des Schnittpunkts
-            x3 = L * (X2 - X1) / d + h * (Y2 - Y1) / d + X1;
-            y3 = L * (Y2 - Y1) / d + h * (X2 - X1) / d + Y1;
-
-            x4 = L * (X2 - X1) / d - h * (Y2 - Y1) / d + X1;
-            y4 = L * (Y2 - Y1) / d - h * (X2 - X1) / d + Y1;
+                x4 = L * (X2 - X1) / d - h * (Y2 - Y1) / d + X1;
+                y4 = L * (Y2 - Y1) / d - h * (X2 - X1) / d + Y1;
+            }          
         }
-
         public void Berechne_Schnittpunkt3 (double m, double z, double d)
         {
             //Parameter Fußkreis
@@ -104,17 +125,26 @@ namespace Sprint2_experiment
 
 
             dis = Math.Sqrt(Math.Pow(X1 - X2, 2) + Math.Pow(Y1 - Y2, 2));
-            L = Math.Pow(R1, 2) + Math.Pow(R2, 2) + Math.Pow(dis, 2) / (2 * d);
-            h = Math.Sqrt(Math.Pow(R1, 2) - Math.Pow(L, 2));
-            // kartesische Koordinaten des Schnittpunkts
-            x5 = L * (X2 - X1) / d + h * (Y2 - Y1) / d + X1;
-            y5 = L * (Y2 - Y1) / d + h * (X2 - X1) / d + Y1;
+            L = (Math.Pow(R1, 2) - Math.Pow(R2, 2) + Math.Pow(dis, 2)) / (2 * d);
 
-            x6 = L * (X2 - X1) / d - h * (Y2 - Y1) / d + X1;
-            y6 = L * (Y2 - Y1) / d - h * (X2 - X1) / d + Y1;
+            if (Math.Pow(R1, 2) - Math.Pow(L, 2) < 0.00001)
+            {
+                h = 0;
+                MessageBox.Show("Das Argument der Wurzel darf nicht 0 sein.", "Fehlermeldung", MessageBoxButton.OK, MessageBoxImage.Warning);
+
+            }
+            else
+            {
+                h = Math.Sqrt(Math.Pow(R1, 2) - Math.Pow(L, 2));
+
+
+                // kartesische Koordinaten des Schnittpunkts
+                x5 = L * (X2 - X1) / d + h * (Y2 - Y1) / d + X1;
+                y5 = L * (Y2 - Y1) / d + h * (X2 - X1) / d + Y1;
+
+                x6 = L * (X2 - X1) / d - h * (Y2 - Y1) / d + X1;
+                y6 = L * (Y2 - Y1) / d - h * (X2 - X1) / d + Y1;
+            }          
         }
-
-
-
     }
 }
