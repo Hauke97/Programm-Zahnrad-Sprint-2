@@ -39,7 +39,7 @@ namespace Sprint2_experiment
         public void Berechne_Schnittpunkte1 (double m, double z, double d)
         {
             // Parameter Kopfkreis
-            R1 = d/ 2 + m;
+            R1 = d / 2 + m;
             X1 = 0;
             Y1 = 0;
 

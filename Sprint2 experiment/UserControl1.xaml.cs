@@ -24,13 +24,15 @@ namespace Sprint2_experiment
     {
         Zahnradparameter zahnradparameter = new Zahnradparameter();
 
+        double m;
+        double d;
+        double z;
+
         public UserControl1()
         {
             InitializeComponent();
         }
-        double m;
-        double d;
-        double z;
+       
 
         //Bei Auswahl eines TreeViewItems ändern sich die Inhalte der Labels
         private void itm_Modul_Selected(object sender, RoutedEventArgs e)
@@ -130,7 +132,7 @@ namespace Sprint2_experiment
         }
 
         //Event für den Berechungsbutton
-        private void btn_berechnen_Click(object sender, RoutedEventArgs e)
+        public void btn_berechnen_Click(object sender, RoutedEventArgs e)
         {
             //if-Schleife:Variablenzuweisung ist abhängig von der Auswahl eines TreeViewItems
 
@@ -140,9 +142,7 @@ namespace Sprint2_experiment
                 //Zuweisung der Variablen über die Textboxen, je nachdem welches Item ausgewählt ist 
                 string eingabem = tb_oben.Text;
                 string eingabez = tb_unten.Text;
-                double m;
-                double z;
-                double d;
+               
 
                 bool checkm = Double.TryParse(eingabem, out m);
                 bool checkz = Double.TryParse(eingabez, out z);
@@ -205,9 +205,7 @@ namespace Sprint2_experiment
 
                 string eingabez = tb_oben.Text;
                 string eingabed = tb_unten.Text;
-                double m;
-                double z;
-                double d;
+                
 
                 bool checkz = Double.TryParse(eingabez, out z);
                 bool checkd = Double.TryParse(eingabed, out d);
@@ -260,9 +258,7 @@ namespace Sprint2_experiment
 
                 string eingabem = tb_oben.Text;
                 string eingabed = tb_unten.Text;
-                double m;
-                double z;
-                double d;
+                
 
                 bool checkm = Double.TryParse(eingabem, out m);
                 bool checkd = Double.TryParse(eingabed, out d);
