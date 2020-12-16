@@ -33,28 +33,28 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Interop.HybridShapeTypeLib">
-      <HintPath>..\..\..\..\..\CATIAV5 Verweise Zahnrad\Interop.HybridShapeTypeLib.dll</HintPath>
+    <Reference Include="Interop.HybridShapeTypeLib%281%29">
+      <HintPath>..\..\..\..\Downloads\Interop.HybridShapeTypeLib(1).dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="Interop.INFITF">
-      <HintPath>..\..\..\..\..\CATIAV5 Verweise Zahnrad\Interop.INFITF.dll</HintPath>
+      <HintPath>..\..\..\..\Downloads\Interop.INFITF.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
-    <Reference Include="Interop.KnowledgewareTypeLib">
-      <HintPath>..\..\..\..\..\CATIAV5 Verweise Zahnrad\Interop.KnowledgewareTypeLib.dll</HintPath>
+    <Reference Include="Interop.KnowledgewareTypeLib%281%29">
+      <HintPath>..\..\..\..\Downloads\Interop.KnowledgewareTypeLib(1).dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
-    <Reference Include="Interop.MECMOD">
-      <HintPath>..\..\..\..\..\CATIAV5 Verweise Zahnrad\Interop.MECMOD.dll</HintPath>
+    <Reference Include="Interop.MECMOD%281%29">
+      <HintPath>..\..\..\..\Downloads\Interop.MECMOD(1).dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
-    <Reference Include="Interop.PARTITF">
-      <HintPath>..\..\..\..\..\CATIAV5 Verweise Zahnrad\Interop.PARTITF.dll</HintPath>
+    <Reference Include="Interop.PARTITF%281%29">
+      <HintPath>..\..\..\..\Downloads\Interop.PARTITF(1).dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
-    <Reference Include="Interop.ProductStructureTypeLib">
-      <HintPath>..\..\..\..\..\CATIAV5 Verweise Zahnrad\Interop.ProductStructureTypeLib.dll</HintPath>
+    <Reference Include="Interop.ProductStructureTypeLib%281%29">
+      <HintPath>..\..\..\..\Downloads\Interop.ProductStructureTypeLib(1).dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="PresentationCore" />
