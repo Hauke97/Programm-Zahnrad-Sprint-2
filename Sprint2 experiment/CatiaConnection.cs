@@ -19,6 +19,7 @@ namespace Sprint2_experiment
     public partial class UserControl1
     {
         
+        
         class CatiaConnection
         {
             INFITF.Application hsp_catiaApp;
@@ -110,7 +111,7 @@ namespace Sprint2_experiment
                 Point2D catPoint2D5 = catFactory2D1.CreatePoint(SP3.x5, SP3.y5);
                 Point2D catPoint2D6 = catFactory2D1.CreatePoint(SP3.x6, SP3.y6);
 
-                Line2D catLine2D1 = catFactory2D1.CreateLine(-18.214, 199.196, -18.214, 264.863);
+                Line2D catLine2D1 = catFactory2D1.CreateLine(SP1.x1, SP1.y1, SP1.x2, SP1.y2);
                 catLine2D1.StartPoint = catPoint2D1;
                 catLine2D1.EndPoint = catPoint2D2;
 
@@ -123,7 +124,7 @@ namespace Sprint2_experiment
                 catLine2D3.StartPoint = catPoint2D3;
                 catLine2D3.EndPoint = catPoint2D4;
 
-                Circle2D catCircle2D1 = catFactory2D1.CreateCircle(0, 0, 200, 1.347830515, 1.479602873);
+                Circle2D catCircle2D1 = catFactory2D1.CreateCircle(SP2.X1, SP2.Y1, SP2.R1, 1.347830515, 1.479602873);
 
                 //Zahn mit Kreismuster vervielfältigen
                 ShapeFactory SF = (ShapeFactory)hsp_catiaPart.Part.ShapeFactory;

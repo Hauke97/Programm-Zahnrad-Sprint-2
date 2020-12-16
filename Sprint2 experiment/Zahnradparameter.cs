@@ -2,7 +2,7 @@
 
 namespace Sprint2_experiment
 {
-    internal class Zahnradparameter
+    public class Zahnradparameter
     {
         public double p;
         public double c;
