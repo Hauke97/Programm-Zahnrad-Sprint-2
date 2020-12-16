@@ -89,11 +89,9 @@ namespace Sprint2_experiment
             public void ErzeugeProfil(double m, double z, double d)
             {
                 Schnittpunkte SP1 = new Schnittpunkte();
-                Schnittpunkte SP2 = new Schnittpunkte();
-                Schnittpunkte SP3 = new Schnittpunkte();
+          
                 SP1.Berechne_Schnittpunkte1(m, z, d);
-                SP2.Berechne_Schnittpunkt2(m, z, d);
-                SP3.Berechne_Schnittpunkt3(m, z, d);
+                
 
                 // Skizze umbenennen
                 hsp_catiaProfil.set_Name("Zahn");
@@ -106,25 +104,28 @@ namespace Sprint2_experiment
                 // Zahn erzeugen
                 Point2D catPoint2D1 = catFactory2D1.CreatePoint(SP1.x1, SP1.y1);
                 Point2D catPoint2D2 = catFactory2D1.CreatePoint(SP1.x2, SP1.y2);
-                Point2D catPoint2D3 = catFactory2D1.CreatePoint(SP2.x3, SP2.y3);
-                Point2D catPoint2D4 = catFactory2D1.CreatePoint(SP2.x4, SP2.y4);
-                Point2D catPoint2D5 = catFactory2D1.CreatePoint(SP3.x5, SP3.y5);
-                Point2D catPoint2D6 = catFactory2D1.CreatePoint(SP3.x6, SP3.y6);
+                Point2D catPoint2D3 = catFactory2D1.CreatePoint(SP1.x3, SP1.y3);
+                Point2D catPoint2D4 = catFactory2D1.CreatePoint(SP1.x4, SP1.y4);
+                Point2D catPoint2D5 = catFactory2D1.CreatePoint(SP1.x5, SP1.y5);
 
-                Line2D catLine2D1 = catFactory2D1.CreateLine(SP1.x1, SP1.y1, SP1.x2, SP1.y2);
+
+                Line2D catLine2D1 = catFactory2D1.CreateLine(SP1.x1, SP1.y1, SP1.x3, SP1.y3);
                 catLine2D1.StartPoint = catPoint2D1;
-                catLine2D1.EndPoint = catPoint2D2;
+                catLine2D1.EndPoint = catPoint2D3;
 
-                Line2D catLine2D2 = catFactory2D1.CreateLine(-18.214, 264.863, 18.214, 264.863);
-                catLine2D2.StartPoint = catPoint2D2;
-                catLine2D2.EndPoint = catPoint2D3;
+                Line2D catLine2D2 = catFactory2D1.CreateLine(SP1.x3, SP1.y3, SP1.x4, SP1.y4);
+                catLine2D2.StartPoint = catPoint2D3;
+                catLine2D2.EndPoint = catPoint2D4;
+
+                Line2D catLine2D3 = catFactory2D1.CreateLine(SP1.x4, SP1.y4, SP1.x2, SP1.y2);
+                catLine2D3.StartPoint = catPoint2D4;
+                catLine2D3.EndPoint = catPoint2D2;
+
+                Line2D catLine2D4 = catFactory2D1.CreateLine(SP1.x1,SP1.y1,SP1.x5,SP1.y5);
+                catLine2D4.StartPoint = catPoint2D1;
+                catLine2D4.EndPoint = catPoint2D5;
 
 
-                Line2D catLine2D3 = catFactory2D1.CreateLine(18.214, 264.863, 18.214, 199.169);
-                catLine2D3.StartPoint = catPoint2D3;
-                catLine2D3.EndPoint = catPoint2D4;
-
-                Circle2D catCircle2D1 = catFactory2D1.CreateCircle(SP2.X1, SP2.Y1, SP2.R1, 1.347830515, 1.479602873);
 
                 //Zahn mit Kreismuster vervielfältigen
                 ShapeFactory SF = (ShapeFactory)hsp_catiaPart.Part.ShapeFactory;
