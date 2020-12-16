@@ -70,8 +70,6 @@ namespace Sprint2_experiment
 
                 x2 = (L * (X2 - X1)) / dis - (h * (Y2 - Y1)) / dis + X1;
                 y2 = (L * (Y2 - Y1)) / dis - (h * (X2 - X1)) / dis + Y1;
-
-
             }
             
         }
