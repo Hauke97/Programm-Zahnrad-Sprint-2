@@ -20,7 +20,7 @@ namespace Sprint2_experiment
         {
         }
 
-        public void Berechne_Parameter(double m, double z, double d)
+        public void Berechne_Parameter(double m, double z, double d, double b)
         {
              p = Math.PI / m;
              c = 0.167 * m;

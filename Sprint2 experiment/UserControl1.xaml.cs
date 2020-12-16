@@ -27,6 +27,8 @@ namespace Sprint2_experiment
         double m;
         double d;
         double z;
+        double b;
+        
 
         public UserControl1()
         {
@@ -142,7 +144,8 @@ namespace Sprint2_experiment
                 //Zuweisung der Variablen über die Textboxen, je nachdem welches Item ausgewählt ist 
                 string eingabem = tb_oben.Text;
                 string eingabez = tb_unten.Text;
-               
+                string breite = tb_breite.Text;
+                double b = Convert.ToDouble(breite);
 
                 bool checkm = Double.TryParse(eingabem, out m);
                 bool checkz = Double.TryParse(eingabez, out z);
@@ -193,7 +196,7 @@ namespace Sprint2_experiment
                 {
                     //Berechnungen mittels Modul und Zähnezahl
                     d = m * z;
-                    zahnradparameter.Berechne_Parameter(m, z, d);
+                    zahnradparameter.Berechne_Parameter(m, z, d, b);
                     tb_Ausgabe.Text = Convert.ToString(d);
                 }
             }
@@ -205,7 +208,8 @@ namespace Sprint2_experiment
 
                 string eingabez = tb_oben.Text;
                 string eingabed = tb_unten.Text;
-                
+                string breite = tb_breite.Text;
+                double b = Convert.ToDouble(breite);
 
                 bool checkz = Double.TryParse(eingabez, out z);
                 bool checkd = Double.TryParse(eingabed, out d);
@@ -245,7 +249,7 @@ namespace Sprint2_experiment
 
                     //Berechnungen mittels Zähnezahl und Teilkreisdurchmesser
                     m = d / z;
-                    zahnradparameter.Berechne_Parameter(m, z, d);
+                    zahnradparameter.Berechne_Parameter(m, z, d, b);
                     tb_Ausgabe.Text = Convert.ToString(m);
                 }
             }
@@ -258,7 +262,8 @@ namespace Sprint2_experiment
 
                 string eingabem = tb_oben.Text;
                 string eingabed = tb_unten.Text;
-                
+                string breite = tb_breite.Text;
+                double b = Convert.ToDouble(breite);
 
                 bool checkm = Double.TryParse(eingabem, out m);
                 bool checkd = Double.TryParse(eingabed, out d);
@@ -297,7 +302,7 @@ namespace Sprint2_experiment
                 {
                     //Berechnungen mittels Modul und Teilkreisdurchmesser
                     z = d / m;
-                    zahnradparameter.Berechne_Parameter(m, z, d);
+                    zahnradparameter.Berechne_Parameter(m, z, d, b);
 
                     tb_Ausgabe.Text = Convert.ToString(z);
                 }
@@ -352,13 +357,11 @@ namespace Sprint2_experiment
                     Console.WriteLine("2");
 
                     // Generiere ein Profil
-                    cc.ErzeugeProfil(m,z,d);
+                    cc.ErzeugeProfil(m,z,d,b);
                     Console.WriteLine("3");
 
 
-                    // Extrudiere Zahnrad
-                    cc.ErzeugeZahnrad(5);
-                    Console.WriteLine("ZR 4");
+                    
 
                 }
                 else

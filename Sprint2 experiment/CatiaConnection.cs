@@ -86,11 +86,11 @@ namespace Sprint2_experiment
                 hsp_catiaProfil.SetAbsoluteAxisData(arr);
             }
 
-            public void ErzeugeProfil(double m, double z, double d)
+            public void ErzeugeProfil(double m, double z, double d, double b)
             {
                 Schnittpunkte SP1 = new Schnittpunkte();
           
-                SP1.Berechne_Schnittpunkte1(m, z, d);
+                SP1.Berechne_Schnittpunkte1(m, z, d, b);
                 
 
                 // Skizze umbenennen
@@ -121,11 +121,13 @@ namespace Sprint2_experiment
                 catLine2D3.StartPoint = catPoint2D4;
                 catLine2D3.EndPoint = catPoint2D2;
 
-                Line2D catLine2D4 = catFactory2D1.CreateLine(SP1.x1,SP1.y1,SP1.x5,SP1.y5);
-                catLine2D4.StartPoint = catPoint2D1;
-                catLine2D4.EndPoint = catPoint2D5;
+                //Line2D catLine2D4 = catFactory2D1.CreateLine(SP1.x1,SP1.y1,SP1.x5,SP1.y5);
+                //catLine2D4.StartPoint = catPoint2D1;
+                //catLine2D4.EndPoint = catPoint2D5;
 
-
+                Circle2D catCircle2D5 = catFactory2D1.CreateCircle(0, 0, d / 2,Math.PI/2 - Math.PI/(2*z),Math.PI/2 - Math.PI/(2*z)-Math.PI/z);
+                catCircle2D5.StartPoint = catPoint2D5;
+                catCircle2D5.EndPoint = catPoint2D1;
 
                 //Zahn mit Kreismuster vervielfältigen
                 ShapeFactory SF = (ShapeFactory)hsp_catiaPart.Part.ShapeFactory;
@@ -137,15 +139,16 @@ namespace Sprint2_experiment
                 Reference RefUrsprung = myPart.CreateReferenceFromObject(Ursprung);
                 HybridShapeDirection XDir = HSF.AddNewDirectionByCoord(1, 0, 0);
                 Reference RefXDir = myPart.CreateReferenceFromObject(XDir);
-
+                int z1 = Convert.ToInt32(z);
                 CircPattern Kreismuster = SF.AddNewSurfacicCircPattern(Factory2D1, 1, 2, 0, 0, 1, 1, RefUrsprung, RefXDir, false, 0, true, false);
                 Kreismuster.CircularPatternParameters = CatCircularPatternParameters.catInstancesandAngularSpacing;
                 AngularRepartition angularRepartition1 = Kreismuster.AngularRepartition;
                 Angle angle1 = angularRepartition1.AngularSpacing;
-                angle1.Value = Convert.ToDouble(360 / 20);
+                angle1.Value = Convert.ToDouble(360 / z1);
                 AngularRepartition angularRepartition2 = Kreismuster.AngularRepartition;
                 IntParam intParam1 = angularRepartition2.InstancesCount;
-                intParam1.Value = 20 + 1;
+                
+                intParam1.Value = z1+1;
 
                 Reference Ref_Kreismuster = myPart.CreateReferenceFromObject(Kreismuster);
                 HybridShapeAssemble Verbindung = HSF.AddNewJoin(Ref_Kreismuster, Ref_Kreismuster);
@@ -166,23 +169,14 @@ namespace Sprint2_experiment
                 hsp_catiaProfil.CloseEdition();
                 // Part aktualisieren
                 hsp_catiaPart.Part.Update();
+
+                
+                myPart.InWorkObject = myBody;
+                Pad myPad = SF.AddNewPadFromRef(Ref_Verbindung, 10);
+                myPart.Update();
             }
 
-            public void ErzeugeZahnrad(double b)
-            {
-                // Hauptkoerper in Bearbeitung definieren
-                hsp_catiaPart.Part.InWorkObject = hsp_catiaPart.Part.MainBody;
-
-                // Block erzeugen
-                ShapeFactory catShapeFactory1 = (ShapeFactory)hsp_catiaPart.Part.ShapeFactory;
-                Pad catPad1 = catShapeFactory1.AddNewPad(hsp_catiaProfil, b);
-
-                // Block umbenennen
-                catPad1.set_Name("Zahnrad");
-
-                // Part aktualisieren
-                hsp_catiaPart.Part.Update();
-            }
+           
         }
 
         
