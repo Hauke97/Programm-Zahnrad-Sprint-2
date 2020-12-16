@@ -41,19 +41,19 @@ namespace Sprint2_experiment
         public void Berechne_Schnittpunkte1 (double m, double z, double d)
         {
             // Parameter Kopfkreis
-            R1 = d / 2 + m;
+            R1 = (d / 2) + m;
             X1 = 0;
             Y1 = 0;
 
             // Parameter großer Kreis
-            X2 = 0.94 * d * Math.Cos(Math.PI * 20 / 180);
-            Y2 = 0.94 * d * Math.Sin(Math.PI * 70 / 180);
-            R2 = Math.Sqrt(Math.Pow(d * Math.Sin(90 / z) - 0.94 * d * Math.Sin(Math.PI * 20 /180), 2) + Math.Pow(d * Math.Cos(90 / z) - 0.94 * d * Math.Cos(Math.PI * 20 / 180), 2));
+            X2 = 0.94 * d * Math.Sin(Math.PI * 20 / 180);
+            Y2 = 0.94 * d * Math.Cos(Math.PI * 20 / 180);
+            R2 = Math.Sqrt(Math.Pow((d/2 * Math.Sin(90 / z)) - (0.94 * d * Math.Sin(Math.PI * 20 /180)), 2) + Math.Pow((d/2 * Math.Cos(90 / z)) - (0.94 * d * Math.Cos(Math.PI * 20 / 180)), 2));
 
             dis = Math.Sqrt(Math.Pow(X1 - X2, 2) + Math.Pow(Y1 - Y2, 2));
-            L = (Math.Pow(R1, 2) - Math.Pow(R2, 2) + Math.Pow(dis, 2)) / (2 * d);
+            L = (Math.Pow(R1, 2) - Math.Pow(R2, 2) + Math.Pow(dis, 2)) / (2 * dis);
 
-            if (Math.Pow(R1, 2) - Math.Pow(L, 2) < 0.00001)
+            if ((Math.Pow(R1, 2) - Math.Pow(L, 2)) < 0.00001)
             {
                 h = 0;
                 MessageBox.Show("Das Argument der Wurzel darf nicht 0 sein.", "Fehlermeldung", MessageBoxButton.OK, MessageBoxImage.Warning);
@@ -65,11 +65,11 @@ namespace Sprint2_experiment
 
 
                 // kartesische Koordinaten des Schnittpunkts
-                x1 = L * (X2 - X1) / d + h * (Y2 - Y1) / d + X1;
-                y1 = L * (Y2 - Y1) / d + h * (X2 - X1) / d + Y1;
+                x1 = (L * (X2 - X1)) / dis + (h * (Y2 - Y1)) / dis + X1;
+                y1 = (L * (Y2 - Y1)) / dis + (h * (X2 - X1)) / dis + Y1;
 
-                x2 = L * (X2 - X1) / d - h * (Y2 - Y1) / d + X1;
-                y2 = L * (Y2 - Y1) / d - h * (X2 - X1) / d + Y1;
+                x2 = (L * (X2 - X1)) / dis - (h * (Y2 - Y1)) / dis + X1;
+                y2 = (L * (Y2 - Y1)) / dis - (h * (X2 - X1)) / dis + Y1;
 
 
             }
@@ -80,8 +80,8 @@ namespace Sprint2_experiment
         public void Berechne_Schnittpunkt2 (double m, double z, double d)
         {
             //Parameter großer Kreis
-            X1 = 0.94 * d * Math.Cos(Math.PI * 20 / 180);
-            Y1 = 0.94 * d * Math.Sin(Math.PI * 70 / 180);
+            X1 = 0.94 * d * Math.Sin(Math.PI * 20 / 180);
+            Y1 = 0.94 * d * Math.Cos(Math.PI * 20 / 180);
             R1 = Math.Sqrt(Math.Pow(d * Math.Sin(90 / z) - 0.94 * d * Math.Sin(Math.PI * 20 / 180), 2) + Math.Pow(d * Math.Cos(90 / z) - 0.94 * d * Math.Cos(Math.PI * 20 / 180), 2));
 
             // Parameter Verrundungskreis
@@ -93,9 +93,9 @@ namespace Sprint2_experiment
 
 
             dis = Math.Sqrt(Math.Pow(X1 - X2, 2) + Math.Pow(Y1 - Y2, 2));
-            L = (Math.Pow(R1, 2) - Math.Pow(R2, 2) + Math.Pow(dis, 2)) / (2 * d);
+            L = (Math.Pow(R1, 2) - Math.Pow(R2, 2) + Math.Pow(dis, 2)) / (2 * dis);
 
-            if (Math.Pow(R1, 2) - Math.Pow(L, 2) < 0.00001)
+            if ((Math.Pow(R1, 2) - Math.Pow(L, 2)) < 0.00001)
             {
                 h = 0;
                 MessageBox.Show("Das Argument der Wurzel darf nicht 0 sein.", "Fehlermeldung", MessageBoxButton.OK, MessageBoxImage.Warning);
@@ -104,11 +104,11 @@ namespace Sprint2_experiment
             {
                 h = Math.Sqrt(Math.Pow(R1, 2) - Math.Pow(L, 2));
                 // kartesische Koordinaten des Schnittpunkts
-                x3 = L * (X2 - X1) / d + h * (Y2 - Y1) / d + X1;
-                y3 = L * (Y2 - Y1) / d + h * (X2 - X1) / d + Y1;
+                x3 = (L * (X2 - X1)) / dis + (h * (Y2 - Y1)) / dis + X1;
+                y3 = (L * (Y2 - Y1)) / dis + (h * (X2 - X1)) / dis + Y1;
 
-                x4 = L * (X2 - X1) / d - h * (Y2 - Y1) / d + X1;
-                y4 = L * (Y2 - Y1) / d - h * (X2 - X1) / d + Y1;
+                x4 = (L * (X2 - X1)) / dis - (h * (Y2 - Y1)) / dis + X1;
+                y4 = (L * (Y2 - Y1)) / dis - (h * (X2 - X1)) / dis + Y1;
             }          
         }
         public void Berechne_Schnittpunkt3 (double m, double z, double d)
@@ -125,9 +125,9 @@ namespace Sprint2_experiment
 
 
             dis = Math.Sqrt(Math.Pow(X1 - X2, 2) + Math.Pow(Y1 - Y2, 2));
-            L = (Math.Pow(R1, 2) - Math.Pow(R2, 2) + Math.Pow(dis, 2)) / (2 * d);
+            L = (Math.Pow(R1, 2) - Math.Pow(R2, 2) + Math.Pow(dis, 2)) / (2 * dis);
 
-            if (Math.Pow(R1, 2) - Math.Pow(L, 2) < 0.00001)
+            if ((Math.Pow(R1, 2) - Math.Pow(L, 2)) < 0.00001)
             {
                 h = 0;
                 MessageBox.Show("Das Argument der Wurzel darf nicht 0 sein.", "Fehlermeldung", MessageBoxButton.OK, MessageBoxImage.Warning);
@@ -139,11 +139,11 @@ namespace Sprint2_experiment
 
 
                 // kartesische Koordinaten des Schnittpunkts
-                x5 = L * (X2 - X1) / d + h * (Y2 - Y1) / d + X1;
-                y5 = L * (Y2 - Y1) / d + h * (X2 - X1) / d + Y1;
+                x5 = (L * (X2 - X1)) / dis + (h * (Y2 - Y1)) / dis + X1;
+                y5 = (L * (Y2 - Y1)) / dis + (h * (X2 - X1)) / dis + Y1;
 
-                x6 = L * (X2 - X1) / d - h * (Y2 - Y1) / d + X1;
-                y6 = L * (Y2 - Y1) / d - h * (X2 - X1) / d + Y1;
+                x6 = (L * (X2 - X1)) / dis - (h * (Y2 - Y1)) / dis + X1;
+                y6 = (L * (Y2 - Y1)) / dis - (h * (X2 - X1)) / dis + Y1;
             }          
         }
     }
